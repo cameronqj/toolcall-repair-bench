@@ -1,0 +1,42 @@
+{
+  "case_id": "0094-carnice-9b-q4km-no-tool-code-snippet",
+  "prompt_id": "no-tool-code-snippet",
+  "natural_output_class": "no_tool",
+  "model": "carnice:9b-q4km",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "run_command",
+      "description": "Run a shell command.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "command": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "command"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. Do not call a tool unless the user explicitly asks you to perform an external action.\n\nAvailable tools:\n{\"name\":\"run_command\",\"description\":\"Run a shell command.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"command\":{\"type\":\"string\"}},\"required\":[\"command\"]}}\n\nUser request: Show a Python function named run_command that prints hello. Do not execute anything.",
+  "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0094-no-tool-code-snippet.txt",
+  "ollama_response_metadata": {
+    "model": "carnice:9b-q4km",
+    "created_at": "2026-06-14T14:12:02.175480378Z",
+    "thinking": "The user is asking me to show a Python function named `run_command` that prints \"hello\". They specifically say \"Do not execute anything.\"\n\nThis is a straightforward request - they want me to display code, not run it. I should just provide the Python function they're asking for.\n",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 2465028516,
+    "load_duration": 666312285,
+    "prompt_eval_count": 94,
+    "prompt_eval_duration": 46249000,
+    "eval_count": 111,
+    "eval_duration": 1677286000
+  },
+  "elapsed_seconds": 3.764
+}

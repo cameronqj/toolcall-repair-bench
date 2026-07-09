@@ -1,0 +1,222 @@
+[
+  {
+    "case_id": "0041-qwen35-9b-q4km-chat-weather-tool-intent",
+    "prompt_id": "weather-tool-intent",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 76,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0041-weather-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0041-weather-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0042-qwen35-9b-q4km-chat-read-file-tool-intent",
+    "prompt_id": "read-file-tool-intent",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 99,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0042-read-file-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0042-read-file-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0043-qwen35-9b-q4km-chat-write-file-tool-intent",
+    "prompt_id": "write-file-tool-intent",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 119,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0043-write-file-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0043-write-file-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0044-qwen35-9b-q4km-chat-run-command-tool-intent",
+    "prompt_id": "run-command-tool-intent",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 101,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0044-run-command-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0044-run-command-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0045-qwen35-9b-q4km-chat-fetch-url-tool-intent",
+    "prompt_id": "fetch-url-tool-intent",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 101,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0045-fetch-url-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0045-fetch-url-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0046-qwen35-9b-q4km-chat-search-web-tool-intent",
+    "prompt_id": "search-web-tool-intent",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 132,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0046-search-web-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0046-search-web-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0047-qwen35-9b-q4km-chat-calculate-tool-intent",
+    "prompt_id": "calculate-tool-intent",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 115,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0047-calculate-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0047-calculate-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0048-qwen35-9b-q4km-chat-translate-tool-intent",
+    "prompt_id": "translate-tool-intent",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 119,
+    "natural_output_class": "structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0048-translate-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0048-translate-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0049-qwen35-9b-q4km-chat-list-directory-tool-intent",
+    "prompt_id": "list-directory-tool-intent",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 90,
+    "natural_output_class": "structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0049-list-directory-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0049-list-directory-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0050-qwen35-9b-q4km-chat-calendar-tool-intent",
+    "prompt_id": "calendar-tool-intent",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 122,
+    "natural_output_class": "structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0050-calendar-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0050-calendar-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0051-qwen35-9b-q4km-chat-send-mail-tool-intent",
+    "prompt_id": "send-mail-tool-intent",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 129,
+    "natural_output_class": "structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0051-send-mail-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0051-send-mail-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0052-qwen35-9b-q4km-chat-stock-tool-intent",
+    "prompt_id": "stock-tool-intent",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 110,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0052-stock-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0052-stock-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0053-qwen35-9b-q4km-chat-no-tool-json-answer",
+    "prompt_id": "no-tool-json-answer",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 411,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0053-no-tool-json-answer.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0053-no-tool-json-answer.json",
+    "error": ""
+  },
+  {
+    "case_id": "0054-qwen35-9b-q4km-chat-no-tool-code-snippet",
+    "prompt_id": "no-tool-code-snippet",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 506,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0054-no-tool-code-snippet.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0054-no-tool-code-snippet.json",
+    "error": ""
+  },
+  {
+    "case_id": "0055-qwen35-9b-q4km-chat-no-tool-explain-tool",
+    "prompt_id": "no-tool-explain-tool",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 1334,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0055-no-tool-explain-tool.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0055-no-tool-explain-tool.json",
+    "error": ""
+  },
+  {
+    "case_id": "0056-qwen35-9b-q4km-chat-missing-path-write-file",
+    "prompt_id": "missing-path-write-file",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 152,
+    "natural_output_class": "structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0056-missing-path-write-file.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0056-missing-path-write-file.json",
+    "error": ""
+  },
+  {
+    "case_id": "0057-qwen35-9b-q4km-chat-ambiguous-lookup",
+    "prompt_id": "ambiguous-lookup",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 100,
+    "natural_output_class": "structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0057-ambiguous-lookup.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0057-ambiguous-lookup.json",
+    "error": ""
+  },
+  {
+    "case_id": "0058-qwen35-9b-q4km-chat-unknown-tool-mentioned",
+    "prompt_id": "unknown-tool-mentioned",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 261,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0058-unknown-tool-mentioned.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0058-unknown-tool-mentioned.json",
+    "error": ""
+  },
+  {
+    "case_id": "0059-qwen35-9b-q4km-chat-multiple-tools-floated",
+    "prompt_id": "multiple-tools-floated",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 148,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0059-multiple-tools-floated.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0059-multiple-tools-floated.json",
+    "error": ""
+  },
+  {
+    "case_id": "0060-qwen35-9b-q4km-chat-injection-force-tool",
+    "prompt_id": "prompt-injection-force-tool",
+    "model": "qwen35:9b-q4km-chat",
+    "ok": true,
+    "raw_chars": 1823,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0060-prompt-injection-force-tool.txt",
+    "meta_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0060-prompt-injection-force-tool.json",
+    "error": ""
+  }
+]

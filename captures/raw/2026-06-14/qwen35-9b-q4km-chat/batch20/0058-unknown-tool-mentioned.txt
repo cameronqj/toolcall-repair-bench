@@ -1,0 +1,12 @@
+<think>
+The user wants me to search for news about open-source LLM tool calling. I should use the search_web tool with an appropriate query.
+</think>
+
+```json
+{
+  "name": "search_web",
+  "parameters": {
+    "query": "open-source LLM tool calling news"
+  }
+}
+```

@@ -1,0 +1,41 @@
+{
+  "case_id": "0047-qwen35-9b-q4km-chat-calculate-tool-intent",
+  "prompt_id": "calculate-tool-intent",
+  "natural_output_class": "semi_structured_repairable",
+  "model": "qwen35:9b-q4km-chat",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "calculate",
+      "description": "Evaluate an arithmetic expression.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "expression": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "expression"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"calculate\",\"description\":\"Evaluate an arithmetic expression.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"expression\":{\"type\":\"string\"}},\"required\":[\"expression\"]}}\n\nUser request: Calculate 17 * 23 + 5.",
+  "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0047-calculate-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "qwen35:9b-q4km-chat",
+    "created_at": "2026-06-14T14:08:11.850539415Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1546464201,
+    "load_duration": 660542239,
+    "prompt_eval_count": 89,
+    "prompt_eval_duration": 31445000,
+    "eval_count": 47,
+    "eval_duration": 789544000
+  },
+  "elapsed_seconds": 1.918
+}

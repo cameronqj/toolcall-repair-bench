@@ -1,0 +1,1 @@
+Someone would use the `fetch_url` tool when they need to retrieve data or content from a specific web address.

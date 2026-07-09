@@ -1,0 +1,39 @@
+{
+  "id": "0054-qwen35-9b-q4km-chat-no-tool-code-snippet",
+  "provenance": {
+    "kind": "captured",
+    "model": "qwen35:9b-q4km-chat",
+    "runtime": "ollama",
+    "harness": "ollama-api-generate",
+    "prompt_id": "no-tool-code-snippet",
+    "temperature": "0",
+    "captured": "2026-06-14",
+    "source": "gpu-capture-panel raw=captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0054-no-tool-code-snippet.txt meta=captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0054-no-tool-code-snippet.json",
+    "sampler": "temperature=0,num_predict=384"
+  },
+  "request_tools": [
+    {
+      "name": "run_command",
+      "description": "Run a shell command.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "command": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "command"
+        ]
+      }
+    }
+  ],
+  "raw_output": "<think>\nThe user is asking me to show them a Python function named `run_command` that prints \"hello\". They explicitly said \"Do not execute anything\", which means I should just display the code without actually running it.\n\nThis is straightforward - I don't need to use any tools here since they're just asking for code, not execution. Let me write out a simple Python function.\n</think>\n\nHere's a Python function named `run_command` that prints \"hello\":\n\n```python\ndef run_command():\n    print(\"hello\")\n```",
+  "taxonomy": [
+    "code_snippet_mention"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "The output directly answers or shows non-tool content; the tool name/text appears as content, not as an emitted call."
+}

@@ -1,0 +1,41 @@
+{
+  "case_id": "0058-qwen35-9b-q4km-chat-unknown-tool-mentioned",
+  "prompt_id": "unknown-tool-mentioned",
+  "natural_output_class": "semi_structured_repairable",
+  "model": "qwen35:9b-q4km-chat",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "search_web",
+      "description": "Search the web.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"search_web\",\"description\":\"Search the web.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"query\":{\"type\":\"string\"}},\"required\":[\"query\"]}}\n\nUser request: Use websearch to find news about open-source LLM tool calling.",
+  "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0058-unknown-tool-mentioned.txt",
+  "ollama_response_metadata": {
+    "model": "qwen35:9b-q4km-chat",
+    "created_at": "2026-06-14T14:08:39.221980132Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 2070924642,
+    "load_duration": 672723279,
+    "prompt_eval_count": 91,
+    "prompt_eval_duration": 80114000,
+    "eval_count": 74,
+    "eval_duration": 1245068000
+  },
+  "elapsed_seconds": 2.46
+}

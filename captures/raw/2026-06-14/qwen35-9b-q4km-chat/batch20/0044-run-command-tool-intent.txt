@@ -1,0 +1,12 @@
+<think>
+
+</think>
+
+```json
+{
+  "name": "run_command",
+  "arguments": {
+    "command": "pwd"
+  }
+}
+```

@@ -1,0 +1,38 @@
+{
+  "id": "0002-toolname-brace-json",
+  "provenance": {
+    "kind": "captured",
+    "model": "gemma-3-4b",
+    "sampler": "unknown",
+    "captured": "2026-05-26",
+    "source": "local-tool-proxy tests/fixtures/model_outputs/tool_name_jsonish.txt"
+  },
+  "request_tools": [
+    {
+      "name": "run_terminal_cmd",
+      "description": "Run a shell command in the terminal.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "command": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "command"
+        ]
+      }
+    }
+  ],
+  "raw_output": "run_terminal_cmd{'command': 'pytest -q',}\n",
+  "taxonomy": [
+    "toolName_brace_json"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "run_terminal_cmd",
+    "arguments": {
+      "command": "pytest -q"
+    }
+  }
+}

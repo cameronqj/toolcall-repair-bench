@@ -1,0 +1,43 @@
+# Python build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+
+# Test / lint / coverage caches
+.coverage
+.pytest_cache/
+.ruff_cache/
+.tox/
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Scratch
+/tmp/
+*.log
+
+# Pending captured-case drafts (unsanitized; promote into corpus/cases/ by hand).
+corpus/pending/
+
+# Local capture automation and internal run prompts are operator-specific.
+scripts/
+docs/agent-prompts/
+
+# NOTE: corpus/results.json is committed — do not ignore it.

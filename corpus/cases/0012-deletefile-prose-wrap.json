@@ -1,0 +1,40 @@
+{
+  "id": "0012-deletefile-prose-wrap",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models the json_with_prose failure shape common to small local models.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "delete_file",
+      "description": "Delete a file from disk.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    }
+  ],
+  "raw_output": "Sure, deleting that now: {\"name\": \"delete_file\", \"arguments\": {\"path\": \"/tmp/old_cache.bin\"}} Let me know if you need anything else.\n",
+  "taxonomy": [
+    "json_with_prose"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "delete_file",
+    "arguments": {
+      "path": "/tmp/old_cache.bin"
+    }
+  },
+  "note": "A valid delete_file JSON call is embedded between prose on both sides; discarding the surrounding sentences leaves the single tool call with path taken verbatim."
+}

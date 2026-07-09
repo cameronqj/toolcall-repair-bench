@@ -1,0 +1,42 @@
+{
+  "case_id": "0098-carnice-9b-q4km-unknown-tool-mentioned",
+  "prompt_id": "unknown-tool-mentioned",
+  "natural_output_class": "semi_structured_repairable",
+  "model": "carnice:9b-q4km",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "search_web",
+      "description": "Search the web.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"search_web\",\"description\":\"Search the web.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"query\":{\"type\":\"string\"}},\"required\":[\"query\"]}}\n\nUser request: Use websearch to find news about open-source LLM tool calling.",
+  "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0098-unknown-tool-mentioned.txt",
+  "ollama_response_metadata": {
+    "model": "carnice:9b-q4km",
+    "created_at": "2026-06-14T14:12:18.379865529Z",
+    "thinking": "The user wants me to search the web for news about open-source LLM tool calling. This is a specific technical topic related to large language models and their ability to call external tools/functions. I should use the search_web tool to find relevant news articles on this topic.\n",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1971024702,
+    "load_duration": 677339324,
+    "prompt_eval_count": 93,
+    "prompt_eval_duration": 77695000,
+    "eval_count": 76,
+    "eval_duration": 1142915000
+  },
+  "elapsed_seconds": 2.353
+}

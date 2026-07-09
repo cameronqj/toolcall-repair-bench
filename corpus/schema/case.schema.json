@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/toolcall-repair-bench/corpus/schema/case.schema.json",
+  "title": "toolcall-repair-bench case",
+  "description": "A case is one captured raw local-model output plus its auditable gold label. Each case records the exact string a model emitted, the tools that were offered in the request, a taxonomy of the malformed shape, and the single defensible gold tool call (or no_tool). Cases are frozen and hermetic so the corpus can be validated in CI.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "provenance", "request_tools", "raw_output", "taxonomy", "gold"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Kebab-case slug identifying the case, e.g. \"0001-json-in-content\".",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "provenance": {
+      "type": "object",
+      "description": "Where the raw output came from. Required so no case can be added without attribution.",
+      "additionalProperties": false,
+      "required": ["kind", "model", "source"],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "description": "Whether the raw_output was captured verbatim from a live model run (\"captured\") or hand-authored to model a known failure shape (\"synthetic\"). This is the single authoritative provenance flag; the legacy boolean `synthetic` must agree with it.",
+          "enum": ["captured", "synthetic"]
+        },
+        "model": {
+          "type": "string",
+          "description": "The local model that produced the raw output (e.g. \"gemma4:e4b-mlx\"), or \"synthetic\" for hand-authored cases."
+        },
+        "runtime": {
+          "type": "string",
+          "description": "The inference runtime that served the model for a captured case (e.g. \"ollama\", \"mlx\", \"llama.cpp\"), or \"unknown\". Omit (or \"n/a\") for synthetic cases."
+        },
+        "harness": {
+          "type": "string",
+          "description": "The client/harness that issued the request for a captured case (e.g. \"opencode\", \"openai-compatible\", \"codex-cli\"), or \"unknown\". Omit (or \"n/a\") for synthetic cases."
+        },
+        "prompt_id": {
+          "type": "string",
+          "description": "Stable identifier for the prompt/task that elicited the output (e.g. \"task-02-bugfix\"), if known."
+        },
+        "temperature": {
+          "type": ["number", "string"],
+          "description": "Decoding temperature for a captured case if known, else \"unknown\"."
+        },
+        "sampler": {
+          "type": "string",
+          "description": "Sampler / decoding settings if known, else \"unknown\" (or \"n/a\" for synthetic)."
+        },
+        "captured": {
+          "type": "string",
+          "description": "ISO date the output was captured or authored.",
+          "format": "date"
+        },
+        "source": {
+          "type": "string",
+          "description": "Where the raw output came from (repo, fixture path, capture session, or a description of the hand-authored shape)."
+        },
+        "synthetic": {
+          "type": "boolean",
+          "description": "Legacy boolean mirror of `kind`. True iff kind == \"synthetic\". Retained for backward compatibility; `kind` is authoritative."
+        }
+      }
+    },
+    "request_tools": {
+      "type": "array",
+      "description": "The tools offered in the request, OpenAI-style function tools minus the outer wrapper. The scorer derives the list of valid tool NAMES from this array.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Tool name."
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable tool description."
+          },
+          "parameters": {
+            "type": "object",
+            "description": "JSON Schema for the tool's parameters."
+          }
+        }
+      }
+    },
+    "raw_output": {
+      "type": "string",
+      "description": "The exact string the model emitted, reproduced byte-for-byte including trailing newlines."
+    },
+    "taxonomy": {
+      "type": "array",
+      "description": "One or more closed-enum labels describing the SHAPE of the malformed output.",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "json_in_content",
+          "toolName_brace_json",
+          "xml_tool_code",
+          "partial_openai_fields",
+          "markdown_fenced_json",
+          "json_with_prose",
+          "python_call_syntax",
+          "provider_specific",
+          "prose_false_positive",
+          "plain_answer",
+          "clarifying_question",
+          "literal_commands",
+          "code_snippet_mention",
+          "documentation_example",
+          "structured_data_no_intent",
+          "unknown_tool_near_match",
+          "injection_force_tool",
+          "missing_required_args",
+          "ambiguous_tool_choice",
+          "truncated_tool_call",
+          "unsafe_guessed_intent"
+        ]
+      }
+    },
+    "gold": {
+      "type": "object",
+      "description": "The single auditable gold label, defensible from raw_output alone.",
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "name", "arguments"],
+          "properties": {
+            "type": {
+              "const": "tool_call"
+            },
+            "name": {
+              "type": "string",
+              "description": "Name of the gold tool call; must be one of the request_tools names."
+            },
+            "arguments": {
+              "type": "object",
+              "description": "The gold arguments object for the tool call."
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type"],
+          "properties": {
+            "type": {
+              "const": "no_tool"
+            }
+          }
+        }
+      ]
+    },
+    "note": {
+      "type": "string",
+      "description": "Optional note explaining an ambiguous gold label. A note, not a guess."
+    }
+  }
+}

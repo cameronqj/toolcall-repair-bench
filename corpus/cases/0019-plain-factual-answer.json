@@ -1,0 +1,44 @@
+{
+  "id": "0019-plain-factual-answer",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models a plain factual NL answer where the offered tool is unnecessary and unnamed.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "unit_convert",
+      "description": "Convert a quantity from one unit to another.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "number"
+          },
+          "from_unit": {
+            "type": "string"
+          },
+          "to_unit": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "value",
+          "from_unit",
+          "to_unit"
+        ]
+      }
+    }
+  ],
+  "raw_output": "Water freezes at 0 degrees Celsius and boils at 100 degrees Celsius at standard sea-level pressure. Those two points are what the Celsius scale was originally defined around.",
+  "taxonomy": [
+    "plain_answer"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "The question is a well-known fact requiring no conversion; the offered `unit_convert` tool is not needed and its name never appears, so no_tool is correct."
+}

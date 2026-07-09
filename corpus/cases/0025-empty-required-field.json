@@ -1,0 +1,39 @@
+{
+  "id": "0025-empty-required-field",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models an empty-required-field case where conservative non-repair is correct.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "send_email",
+      "description": "Send an email to a recipient.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "to": {
+            "type": "string",
+            "description": "Recipient email address."
+          },
+          "subject": {
+            "type": "string",
+            "description": "Subject line of the email."
+          },
+          "body": {
+            "type": "string",
+            "description": "Plain-text body of the email."
+          }
+        },
+        "required": ["to", "subject"]
+      }
+    }
+  ],
+  "raw_output": "{\"name\": \"send_email\", \"arguments\": {\"to\": \"\", \"subject\": \"Hi\", \"body\": \"Quick note about the meeting.\"}}",
+  "taxonomy": ["missing_required_args"],
+  "gold": { "type": "no_tool" },
+  "note": "The required `to` field is present but blank, and the output offers no recipient anywhere, so any repair would fabricate an email address; no_tool is the correct conservative label."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "0076-carnice-9b-q4km-code-nothink-missing-path-write-file",
+  "provenance": {
+    "kind": "captured",
+    "model": "carnice:9b-q4km-code-nothink",
+    "runtime": "ollama",
+    "harness": "ollama-api-generate",
+    "prompt_id": "missing-path-write-file",
+    "temperature": "0",
+    "captured": "2026-06-14",
+    "source": "gpu-capture-panel raw=captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0076-missing-path-write-file.txt meta=captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0076-missing-path-write-file.json",
+    "sampler": "temperature=0,num_predict=384"
+  },
+  "request_tools": [
+    {
+      "name": "write_file",
+      "description": "Write content to a file.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "content"
+        ]
+      }
+    }
+  ],
+  "raw_output": "<think>\nOkay, I need to write the text \"hello from batch twenty.\" into a file. The user didn't specify the filename, so I should choose a reasonable one. Maybe something like \"batch_twenty.txt\" since it's related to the content. Let me make sure the path is correct. The current directory is probably fine. So the command would be write_file with path \"batch_twenty.txt\" and content \"hello from batch twenty.\" Wait, but I need to check if there are any special characters or formatting issues. The text seems straightforward. Alright, proceed with that.\n",
+  "taxonomy": [
+    "missing_required_args"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "The output is leaked/incomplete reasoning and contains no final committed tool-call object; repairing it would act on thought text rather than an emitted call."
+}

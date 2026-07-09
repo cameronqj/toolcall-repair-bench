@@ -1,0 +1,41 @@
+{
+  "case_id": "0122-gemma4-12b-it-qat-read-file-tool-intent",
+  "prompt_id": "read-file-tool-intent",
+  "natural_output_class": "unrecoverable_malformed",
+  "model": "gemma4:12b-it-qat",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "read_file",
+      "description": "Read a text file by path.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"read_file\",\"description\":\"Read a text file by path.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"}},\"required\":[\"path\"]}}\n\nUser request: Read the file config/settings.toml.",
+  "raw_path": "captures/raw/2026-06-14/gemma4-12b-it-qat/batch20/0122-read-file-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "gemma4:12b-it-qat",
+    "created_at": "2026-06-14T14:14:27.47556348Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 4405023068,
+    "load_duration": 866055231,
+    "prompt_eval_count": 100,
+    "prompt_eval_duration": 233885000,
+    "eval_count": 68,
+    "eval_duration": 3285966000
+  },
+  "elapsed_seconds": 5.34
+}

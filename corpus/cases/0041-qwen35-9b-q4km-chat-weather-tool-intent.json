@@ -1,0 +1,52 @@
+{
+  "id": "0041-qwen35-9b-q4km-chat-weather-tool-intent",
+  "provenance": {
+    "kind": "captured",
+    "model": "qwen35:9b-q4km-chat",
+    "runtime": "ollama",
+    "harness": "ollama-api-generate",
+    "prompt_id": "weather-tool-intent",
+    "temperature": "0",
+    "captured": "2026-06-14",
+    "source": "gpu-capture-panel raw=captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0041-weather-tool-intent.txt meta=captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0041-weather-tool-intent.json",
+    "sampler": "temperature=0,num_predict=384"
+  },
+  "request_tools": [
+    {
+      "name": "get_weather",
+      "description": "Get current weather for a city.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string"
+          },
+          "units": {
+            "type": "string",
+            "enum": [
+              "metric",
+              "imperial"
+            ]
+          }
+        },
+        "required": [
+          "city",
+          "units"
+        ]
+      }
+    }
+  ],
+  "raw_output": "<think>\n\n</think>\n\n{\"get_weather\": {\"city\": \"Seattle\", \"units\": \"imperial\"}}",
+  "taxonomy": [
+    "toolName_brace_json"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "get_weather",
+    "arguments": {
+      "city": "Seattle",
+      "units": "imperial"
+    }
+  },
+  "note": "The output is a JSON object keyed by the offered tool name with a complete argument object."
+}

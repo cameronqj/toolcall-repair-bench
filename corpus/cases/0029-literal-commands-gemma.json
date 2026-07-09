@@ -1,0 +1,39 @@
+{
+  "id": "0029-literal-commands-gemma",
+  "provenance": {
+    "kind": "captured",
+    "model": "gemma4:e4b-mlx",
+    "runtime": "ollama",
+    "harness": "opencode",
+    "prompt_id": "rigid-tictactoe",
+    "temperature": "unknown",
+    "sampler": "unknown",
+    "captured": "2026-05-26",
+    "source": "Excerpt (numbered steps 23-24) of a longer literal-command dump captured from gemma4:e4b-mlx on the rigid Tic-Tac-Toe prompt; the model printed shell/git commands as numbered prose instead of calling tools. Recorded verbatim in local-tool-proxy docs/history/2026-05-26-gemma4-agentic-testing.md and docs/model-stops-using-tools-analysis.md (collapse category=literal_commands)."
+  },
+  "request_tools": [
+    {
+      "name": "bash",
+      "description": "Run a shell command and return its output.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "command": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "command"
+        ]
+      }
+    }
+  ],
+  "raw_output": "23. git add .\n24. git commit -m \"Implement FastAPI backend and game logic\"\n",
+  "taxonomy": [
+    "literal_commands"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "Under the rigid 'show every command' prompt the model abandoned tool use and printed the commands as numbered text. No tool call is present; a repairer that synthesizes a bash call from printed command text would fabricate one. no_tool is correct. This is a real captured excerpt, not a verbatim full turn (the surrounding steps are elided)."
+}

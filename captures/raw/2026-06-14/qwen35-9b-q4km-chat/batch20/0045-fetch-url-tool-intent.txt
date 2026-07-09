@@ -1,0 +1,7 @@
+<think>
+
+</think>
+
+{
+  "content": "{\"fetch_url\": {\"url\": \"https://example.com/status.json\"}}"
+}

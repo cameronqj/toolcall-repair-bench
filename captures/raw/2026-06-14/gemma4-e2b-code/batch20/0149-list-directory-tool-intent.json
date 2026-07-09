@@ -1,0 +1,41 @@
+{
+  "case_id": "0149-gemma4-e2b-code-list-directory-tool-intent",
+  "prompt_id": "list-directory-tool-intent",
+  "natural_output_class": "semi_structured_repairable",
+  "model": "gemma4:e2b-code",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "list_directory",
+      "description": "List files in a directory.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"list_directory\",\"description\":\"List files in a directory.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"}},\"required\":[\"path\"]}}\n\nUser request: List the files in /tmp.",
+  "raw_path": "captures/raw/2026-06-14/gemma4-e2b-code/batch20/0149-list-directory-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "gemma4:e2b-code",
+    "created_at": "2026-06-14T14:19:05.471152733Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1516061598,
+    "load_duration": 793993793,
+    "prompt_eval_count": 97,
+    "prompt_eval_duration": 31575000,
+    "eval_count": 68,
+    "eval_duration": 686004000
+  },
+  "elapsed_seconds": 1.9
+}

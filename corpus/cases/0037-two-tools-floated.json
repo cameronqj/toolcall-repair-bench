@@ -1,0 +1,63 @@
+{
+  "id": "0037-two-tools-floated",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "synthetic": true,
+    "source": "Hand-authored negative control: the model floats two candidate tools and asks the user to choose, committing to neither."
+  },
+  "request_tools": [
+    {
+      "name": "convert_currency",
+      "description": "Convert an amount between currencies.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "number"
+          },
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "amount",
+          "from",
+          "to"
+        ]
+      }
+    },
+    {
+      "name": "get_exchange_rate",
+      "description": "Get the current exchange rate between two currencies.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "from",
+          "to"
+        ]
+      }
+    }
+  ],
+  "raw_output": "I could call convert_currency to give you the converted amount, or get_exchange_rate if you just want today's rate. Which would you like?",
+  "taxonomy": [
+    "ambiguous_tool_choice"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "Both offered tools are named and the model commits to neither, asking the user to choose. Picking one would be a guess. no_tool is correct."
+}

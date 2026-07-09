@@ -1,0 +1,41 @@
+{
+  "case_id": "0125-gemma4-12b-it-qat-fetch-url-tool-intent",
+  "prompt_id": "fetch-url-tool-intent",
+  "natural_output_class": "unrecoverable_malformed",
+  "model": "gemma4:12b-it-qat",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "fetch_url",
+      "description": "Fetch a URL.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"fetch_url\",\"description\":\"Fetch a URL.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\"}},\"required\":[\"url\"]}}\n\nUser request: Fetch https://example.com/status.json.",
+  "raw_path": "captures/raw/2026-06-14/gemma4-12b-it-qat/batch20/0125-fetch-url-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "gemma4:12b-it-qat",
+    "created_at": "2026-06-14T14:14:43.057375521Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 4665072236,
+    "load_duration": 944458203,
+    "prompt_eval_count": 99,
+    "prompt_eval_duration": 222731000,
+    "eval_count": 72,
+    "eval_duration": 3484181000
+  },
+  "elapsed_seconds": 5.029
+}

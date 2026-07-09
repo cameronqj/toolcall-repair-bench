@@ -1,0 +1,1 @@
+{"name": "get_weather", "arguments": {"city": "Seattle", "units": "imperial"}}

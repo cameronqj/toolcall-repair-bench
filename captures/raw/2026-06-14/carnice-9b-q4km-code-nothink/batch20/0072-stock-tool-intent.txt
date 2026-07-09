@@ -1,0 +1,2 @@
+<think>
+Okay, the user wants me to get a stock quote for NVDA. Let me check the available tools. There's a get_stock_quote tool that takes a symbol as a parameter. The symbol here is NVDA, which is NVIDIA's ticker. I need to call this tool with the correct symbol. Let me make sure there are no typos. NVDA is correct. Alright, I'll proceed with the function call.

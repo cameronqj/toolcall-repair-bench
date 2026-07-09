@@ -1,0 +1,12 @@
+<think>
+
+</think>
+
+```json
+{
+  "tool_name": "search_web",
+  "arguments": {
+    "query": "llama.cpp Gemma 4 context window"
+  }
+}
+```

@@ -1,0 +1,49 @@
+{
+  "id": "0005-weather-json-content",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models the json_in_content failure shape common to small local models.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "get_weather",
+      "description": "Get the current weather for a location.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "City name."
+          },
+          "units": {
+            "type": "string",
+            "enum": [
+              "metric",
+              "imperial"
+            ]
+          }
+        },
+        "required": [
+          "location"
+        ]
+      }
+    }
+  ],
+  "raw_output": "{\"name\": \"get_weather\", \"arguments\": {\"location\": \"Berlin\", \"units\": \"metric\"}}\n",
+  "taxonomy": [
+    "json_in_content"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "get_weather",
+    "arguments": {
+      "location": "Berlin",
+      "units": "metric"
+    }
+  },
+  "note": "The content channel holds a complete, well-formed tool-call JSON object naming get_weather with both arguments; recovery is a direct lift of name and arguments."
+}

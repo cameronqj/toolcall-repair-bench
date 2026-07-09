@@ -1,0 +1,44 @@
+{
+  "id": "0014-stockprice-python-call",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models the python_call_syntax failure shape common to small local models.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "get_stock_price",
+      "description": "Get the price of a stock over a period.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "symbol": {
+            "type": "string"
+          },
+          "period": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "symbol"
+        ]
+      }
+    }
+  ],
+  "raw_output": "get_stock_price(symbol=\"AAPL\", period=\"1d\")\n",
+  "taxonomy": [
+    "python_call_syntax"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "get_stock_price",
+    "arguments": {
+      "symbol": "AAPL",
+      "period": "1d"
+    }
+  },
+  "note": "The model emitted a Python-style function call; the callee maps to the tool name and the keyword arguments map directly to symbol and period, both copied verbatim."
+}

@@ -1,0 +1,43 @@
+{
+  "id": "0001-json-in-content",
+  "provenance": {
+    "kind": "captured",
+    "model": "gemma-3-4b",
+    "sampler": "unknown",
+    "captured": "2026-05-26",
+    "source": "local-tool-proxy tests/fixtures/model_outputs/json_in_content.json"
+  },
+  "request_tools": [
+    {
+      "name": "write_file",
+      "description": "Write content to a file at the given path.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "content"
+        ]
+      }
+    }
+  ],
+  "raw_output": "{\n  \"name\": \"write_file\",\n  \"arguments\": {\n    \"path\": \"buggy.py\",\n    \"content\": \"fixed code here\"\n  }\n}\n",
+  "taxonomy": [
+    "json_in_content"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "write_file",
+    "arguments": {
+      "path": "buggy.py",
+      "content": "fixed code here"
+    }
+  }
+}

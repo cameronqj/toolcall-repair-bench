@@ -1,0 +1,45 @@
+{
+  "case_id": "0063-carnice-9b-q4km-code-nothink-write-file-tool-intent",
+  "prompt_id": "write-file-tool-intent",
+  "natural_output_class": "missing_required_args",
+  "model": "carnice:9b-q4km-code-nothink",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "write_file",
+      "description": "Write content to a file.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "content"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"write_file\",\"description\":\"Write content to a file.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"},\"content\":{\"type\":\"string\"}},\"required\":[\"path\",\"content\"]}}\n\nUser request: Write 'alpha beta' to notes/todo.txt.",
+  "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0063-write-file-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "carnice:9b-q4km-code-nothink",
+    "created_at": "2026-06-14T14:10:00.738306335Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 2359759297,
+    "load_duration": 644340758,
+    "prompt_eval_count": 97,
+    "prompt_eval_duration": 80783000,
+    "eval_count": 94,
+    "eval_duration": 1573072000
+  },
+  "elapsed_seconds": 2.728
+}

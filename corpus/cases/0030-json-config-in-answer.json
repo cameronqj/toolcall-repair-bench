@@ -1,0 +1,40 @@
+{
+  "id": "0030-json-config-in-answer",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "synthetic": true,
+    "source": "Hand-authored negative control: an ordinary JSON config quoted inside a natural-language answer, with no tool intent."
+  },
+  "request_tools": [
+    {
+      "name": "write_file",
+      "description": "Write content to a file.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "content"
+        ]
+      }
+    }
+  ],
+  "raw_output": "Here is a minimal tsconfig.json you can start from:\n\n{\n  \"compilerOptions\": {\n    \"target\": \"es2020\",\n    \"strict\": true\n  }\n}\n\nAdjust \"target\" to match the runtime you deploy to.",
+  "taxonomy": [
+    "structured_data_no_intent"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "The JSON is example data shown to the user, not a tool call. It has no name/arguments tool shape and the surrounding prose answers a question. Parsing the embedded object into a write_file call would fabricate intent. no_tool is correct."
+}

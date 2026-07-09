@@ -1,0 +1,35 @@
+{
+  "id": "0024-missing-required-path",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models a missing-required-argument case where conservative non-repair is correct.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "write_file",
+      "description": "Write text content to a file on disk, creating it if it does not exist.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Absolute or workspace-relative path of the file to write."
+          },
+          "content": {
+            "type": "string",
+            "description": "The text content to write into the file."
+          }
+        },
+        "required": ["path", "content"]
+      }
+    }
+  ],
+  "raw_output": "{\"name\": \"write_file\", \"arguments\": {\"content\": \"# Release Notes\\nVersion 2.3.0 ships the new export pipeline.\\n\"}}",
+  "taxonomy": ["missing_required_args"],
+  "gold": { "type": "no_tool" },
+  "note": "The required `path` argument is entirely absent and nothing in the output names a target file, so any repair would have to invent a filesystem destination; no_tool is the correct conservative label."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "0003-xml-tool-code",
+  "provenance": {
+    "kind": "captured",
+    "model": "gemma-3-4b",
+    "sampler": "unknown",
+    "captured": "2026-05-26",
+    "source": "local-tool-proxy tests/fixtures/model_outputs/xml_tool_code.txt"
+  },
+  "request_tools": [
+    {
+      "name": "run_command",
+      "description": "Run a shell command.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "command": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "command"
+        ]
+      }
+    }
+  ],
+  "raw_output": "<tool_code>run_command(\"mkdir multi_tool_test\")</tool_code>\n",
+  "taxonomy": [
+    "xml_tool_code"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "run_command",
+    "arguments": {
+      "command": "mkdir multi_tool_test"
+    }
+  },
+  "note": "The model wrapped a positional string call in <tool_code>. Gold maps the single string argument to the tool's `command` parameter, which is the only required field."
+}

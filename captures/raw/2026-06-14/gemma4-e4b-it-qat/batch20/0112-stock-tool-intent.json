@@ -1,0 +1,41 @@
+{
+  "case_id": "0112-gemma4-e4b-it-qat-stock-tool-intent",
+  "prompt_id": "stock-tool-intent",
+  "natural_output_class": "structured_repairable",
+  "model": "gemma4:e4b-it-qat",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "get_stock_quote",
+      "description": "Get a stock quote by ticker.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "symbol": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "symbol"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"get_stock_quote\",\"description\":\"Get a stock quote by ticker.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"symbol\":{\"type\":\"string\"}},\"required\":[\"symbol\"]}}\n\nUser request: Get a quote for NVDA.",
+  "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0112-stock-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "gemma4:e4b-it-qat",
+    "created_at": "2026-06-14T14:13:26.991045799Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1823270651,
+    "load_duration": 910144880,
+    "prompt_eval_count": 100,
+    "prompt_eval_duration": 44186000,
+    "eval_count": 69,
+    "eval_duration": 862696000
+  },
+  "elapsed_seconds": 2.199
+}

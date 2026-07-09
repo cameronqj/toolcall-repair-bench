@@ -1,0 +1,46 @@
+{
+  "case_id": "0096-carnice-9b-q4km-missing-path-write-file",
+  "prompt_id": "missing-path-write-file",
+  "natural_output_class": "structured_repairable",
+  "model": "carnice:9b-q4km",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "write_file",
+      "description": "Write content to a file.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "content"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"write_file\",\"description\":\"Write content to a file.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"},\"content\":{\"type\":\"string\"}},\"required\":[\"path\",\"content\"]}}\n\nUser request: Write this text to the file: hello from batch twenty.",
+  "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0096-missing-path-write-file.txt",
+  "ollama_response_metadata": {
+    "model": "carnice:9b-q4km",
+    "created_at": "2026-06-14T14:12:12.768868141Z",
+    "thinking": "Okay, the user wants me to write the text \"hello from batch twenty.\" into a file. Let me check the available tools. There's a write_file tool that takes a path and content. The user didn't specify the file path, so I need to decide on a reasonable one. Maybe a simple path like \"batch_twenty.txt\" would work. The content is exactly as given. I should make sure there are no typos in the text. Let me confirm the message: \"hello from batch twenty.\" Yes, that's correct. Alright, I'll proceed with writing that to the file.\n",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 3101948632,
+    "load_duration": 681613343,
+    "prompt_eval_count": 101,
+    "prompt_eval_duration": 83817000,
+    "eval_count": 150,
+    "eval_duration": 2274474000
+  },
+  "elapsed_seconds": 3.5
+}

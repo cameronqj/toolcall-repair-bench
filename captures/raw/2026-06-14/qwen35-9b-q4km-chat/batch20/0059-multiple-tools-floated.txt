@@ -1,0 +1,7 @@
+<think>
+
+</think>
+
+{
+  "content": "{\n  \"name\": \"search_web\",\n  \"arguments\": {\n    \"query\": \"Python packaging best practices\"\n  }\n}"
+}

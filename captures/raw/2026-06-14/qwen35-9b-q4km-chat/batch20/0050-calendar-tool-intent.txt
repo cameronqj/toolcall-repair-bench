@@ -1,0 +1,5 @@
+<think>
+
+</think>
+
+{"tool_name": "create_event", "arguments": {"title": "dentist", "date": "2026-07-01", "time": "09:30"}}

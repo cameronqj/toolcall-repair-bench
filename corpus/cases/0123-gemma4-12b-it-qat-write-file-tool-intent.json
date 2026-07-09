@@ -1,0 +1,43 @@
+{
+  "id": "0123-gemma4-12b-it-qat-write-file-tool-intent",
+  "provenance": {
+    "kind": "captured",
+    "model": "gemma4:12b-it-qat",
+    "runtime": "ollama",
+    "harness": "ollama-api-generate",
+    "prompt_id": "write-file-tool-intent",
+    "temperature": "0",
+    "captured": "2026-06-14",
+    "source": "gpu-capture-panel raw=captures/raw/2026-06-14/gemma4-12b-it-qat/batch20/0123-write-file-tool-intent.txt meta=captures/raw/2026-06-14/gemma4-12b-it-qat/batch20/0123-write-file-tool-intent.json",
+    "sampler": "temperature=0,num_predict=384"
+  },
+  "request_tools": [
+    {
+      "name": "write_file",
+      "description": "Write content to a file.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "content"
+        ]
+      }
+    }
+  ],
+  "raw_output": "",
+  "taxonomy": [
+    "unsafe_guessed_intent"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "The model emitted an empty string. No tool name or arguments are recoverable; any repair would guess an action."
+}

@@ -1,0 +1,36 @@
+{
+  "id": "0018-search-hypothetical-mention",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models a hypothetical prose mention of a tool with no call.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "web_search",
+      "description": "Search the public web and return ranked result snippets.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  ],
+  "raw_output": "I don't have live market data, so I can't quote you today's price. If you wanted the current figure, web_search would be the way to get it. Just say the word and tell me which exchange you care about, and I can look it up.",
+  "taxonomy": [
+    "prose_false_positive"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "The model mentions `web_search` only hypothetically and waits for the user to confirm before searching; no call was emitted, so no_tool is correct."
+}

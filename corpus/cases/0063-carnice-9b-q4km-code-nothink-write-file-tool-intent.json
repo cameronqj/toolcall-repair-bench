@@ -1,0 +1,43 @@
+{
+  "id": "0063-carnice-9b-q4km-code-nothink-write-file-tool-intent",
+  "provenance": {
+    "kind": "captured",
+    "model": "carnice:9b-q4km-code-nothink",
+    "runtime": "ollama",
+    "harness": "ollama-api-generate",
+    "prompt_id": "write-file-tool-intent",
+    "temperature": "0",
+    "captured": "2026-06-14",
+    "source": "gpu-capture-panel raw=captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0063-write-file-tool-intent.txt meta=captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0063-write-file-tool-intent.json",
+    "sampler": "temperature=0,num_predict=384"
+  },
+  "request_tools": [
+    {
+      "name": "write_file",
+      "description": "Write content to a file.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "content"
+        ]
+      }
+    }
+  ],
+  "raw_output": "<think>\nOkay, the user wants me to write 'alpha beta' to a file called notes/todo.txt. Let me check the available tools. I have the write_file tool which takes path and content as parameters. The path should be 'notes/todo.txt' and the content is 'alpha beta'. I need to make sure the directory exists, but since the user didn't mention any issues, I'll proceed. Just call the write_file with those parameters.\n",
+  "taxonomy": [
+    "prose_false_positive"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "The output is leaked/incomplete reasoning and contains no final committed tool-call object; repairing it would act on thought text rather than an emitted call."
+}

@@ -1,0 +1,2 @@
+<think>
+The user is asking me to search for information about "llama.cpp Gemma 4 context window". This seems to be a technical question about a specific AI model (Gemma 4) and its context window specifications when used with llama.cpp. Let me search the web for this information.

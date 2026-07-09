@@ -1,0 +1,41 @@
+{
+  "case_id": "0049-qwen35-9b-q4km-chat-list-directory-tool-intent",
+  "prompt_id": "list-directory-tool-intent",
+  "natural_output_class": "structured_repairable",
+  "model": "qwen35:9b-q4km-chat",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "list_directory",
+      "description": "List files in a directory.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"list_directory\",\"description\":\"List files in a directory.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"}},\"required\":[\"path\"]}}\n\nUser request: List the files in /tmp.",
+  "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0049-list-directory-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "qwen35:9b-q4km-chat",
+    "created_at": "2026-06-14T14:08:15.253744885Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1335195056,
+    "load_duration": 667151655,
+    "prompt_eval_count": 86,
+    "prompt_eval_duration": 31173000,
+    "eval_count": 34,
+    "eval_duration": 563795000
+  },
+  "elapsed_seconds": 1.709
+}

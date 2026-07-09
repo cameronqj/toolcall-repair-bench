@@ -1,0 +1,2 @@
+<think>
+The user wants me to search for news about open-source LLM tool calling. This is a specific technical topic related to large language models and their ability to call external tools/functions. I should use the search_web tool to find relevant information.

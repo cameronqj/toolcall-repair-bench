@@ -1,0 +1,45 @@
+{
+  "case_id": "0128-gemma4-12b-it-qat-translate-tool-intent",
+  "prompt_id": "translate-tool-intent",
+  "natural_output_class": "unrecoverable_malformed",
+  "model": "gemma4:12b-it-qat",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "translate_text",
+      "description": "Translate text into a target language.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "target_language": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text",
+          "target_language"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"translate_text\",\"description\":\"Translate text into a target language.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"text\":{\"type\":\"string\"},\"target_language\":{\"type\":\"string\"}},\"required\":[\"text\",\"target_language\"]}}\n\nUser request: Translate 'good morning' into Spanish.",
+  "raw_path": "captures/raw/2026-06-14/gemma4-12b-it-qat/batch20/0128-translate-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "gemma4:12b-it-qat",
+    "created_at": "2026-06-14T14:14:57.09977287Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 4984552061,
+    "load_duration": 902179010,
+    "prompt_eval_count": 112,
+    "prompt_eval_duration": 231201000,
+    "eval_count": 79,
+    "eval_duration": 3835309000
+  },
+  "elapsed_seconds": 5.329
+}

@@ -1,0 +1,11 @@
+```json
+{
+  "tool_call": {
+    "name": "write_file",
+    "arguments": {
+      "path": "hello_from_batch_twenty.txt",
+      "content": "hello from batch twenty"
+    }
+  }
+}
+```

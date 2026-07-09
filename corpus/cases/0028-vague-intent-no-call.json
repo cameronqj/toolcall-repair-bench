@@ -1,0 +1,31 @@
+{
+  "id": "0028-vague-intent-no-call",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models a vague-guessed-intent case where conservative non-repair is correct.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "run_command",
+      "description": "Execute a shell command and return its stdout and stderr.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "command": {
+            "type": "string",
+            "description": "The full shell command line to execute."
+          }
+        },
+        "required": ["command"]
+      }
+    }
+  ],
+  "raw_output": "Hmm, maybe I should run something to check the status of the service before we continue...",
+  "taxonomy": ["unsafe_guessed_intent"],
+  "gold": { "type": "no_tool" },
+  "note": "The output only muses about running \"something\" with no concrete command string, so any repair would have to invent the entire command; no_tool is the correct conservative label."
+}

@@ -1,0 +1,39 @@
+{
+  "id": "0021-plain-summary",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models an in-prose summary where a persistence tool is offered but unrequested and unnamed.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "save_note",
+      "description": "Persist a note to the user's notebook.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "body"
+        ]
+      }
+    }
+  ],
+  "raw_output": "Here's the gist: the memo announces that the office will move to the Riverside building in September, asks each team to inventory equipment by August 1, and notes that remote staff are unaffected. The main action item is the equipment inventory deadline.",
+  "taxonomy": [
+    "plain_answer"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "The user only asked for a summary, not to save anything; the offered `save_note` tool is not warranted and its name never appears, so no_tool is correct."
+}

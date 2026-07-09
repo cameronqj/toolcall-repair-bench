@@ -1,0 +1,12 @@
+<think>
+The user is asking me to show them a Python function named `run_command` that prints "hello". They explicitly said "Do not execute anything", which means I should just display the code without actually running it.
+
+This is straightforward - I don't need to use any tools here since they're just asking for code, not execution. Let me write out a simple Python function.
+</think>
+
+Here's a Python function named `run_command` that prints "hello":
+
+```python
+def run_command():
+    print("hello")
+```

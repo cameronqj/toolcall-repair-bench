@@ -1,0 +1,46 @@
+{
+  "case_id": "0083-carnice-9b-q4km-write-file-tool-intent",
+  "prompt_id": "write-file-tool-intent",
+  "natural_output_class": "structured_repairable",
+  "model": "carnice:9b-q4km",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "write_file",
+      "description": "Write content to a file.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "content"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"write_file\",\"description\":\"Write content to a file.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"},\"content\":{\"type\":\"string\"}},\"required\":[\"path\",\"content\"]}}\n\nUser request: Write 'alpha beta' to notes/todo.txt.",
+  "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0083-write-file-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "carnice:9b-q4km",
+    "created_at": "2026-06-14T14:11:17.456331643Z",
+    "thinking": "Okay, the user wants me to write 'alpha beta' to the file notes/todo.txt. Let me check the available tools. There's a write_file tool that takes a path and content. So I need to use that. The path should be 'notes/todo.txt' and the content is 'alpha beta'. I should make sure the path is correct. The user specified the exact filename, so I'll use that. No need to check if the directory exists since the tool probably handles that. Just call the write_file with the correct parameters.\n",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 2834211049,
+    "load_duration": 683026054,
+    "prompt_eval_count": 99,
+    "prompt_eval_duration": 79573000,
+    "eval_count": 133,
+    "eval_duration": 2004555000
+  },
+  "elapsed_seconds": 3.213
+}

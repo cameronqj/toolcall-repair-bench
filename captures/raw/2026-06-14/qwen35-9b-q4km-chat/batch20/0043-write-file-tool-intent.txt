@@ -1,0 +1,7 @@
+<think>
+
+</think>
+
+```json
+{"name": "write_file", "arguments": {"path": "notes/todo.txt", "content": "alpha beta"}}
+```

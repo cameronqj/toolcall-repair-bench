@@ -1,0 +1,11 @@
+```json
+{
+  "tool_call": {
+    "name": "translate_text",
+    "arguments": {
+      "text": "good morning",
+      "target_language": "Spanish"
+    }
+  }
+}
+```

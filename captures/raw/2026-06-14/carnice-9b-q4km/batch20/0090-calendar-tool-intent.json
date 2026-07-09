@@ -1,0 +1,50 @@
+{
+  "case_id": "0090-carnice-9b-q4km-calendar-tool-intent",
+  "prompt_id": "calendar-tool-intent",
+  "natural_output_class": "structured_repairable",
+  "model": "carnice:9b-q4km",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "create_event",
+      "description": "Create a calendar event.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "date",
+          "time"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"create_event\",\"description\":\"Create a calendar event.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"title\":{\"type\":\"string\"},\"date\":{\"type\":\"string\"},\"time\":{\"type\":\"string\"}},\"required\":[\"title\",\"date\",\"time\"]}}\n\nUser request: Create a calendar event called dentist on 2026-07-01 at 09:30.",
+  "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0090-calendar-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "carnice:9b-q4km",
+    "created_at": "2026-06-14T14:11:47.541298257Z",
+    "thinking": "Okay, let's see. The user wants me to create a calendar event called \"dentist\" on July 1, 2026, at 9:30 AM. I need to use the create_event tool for this. Let me check the parameters required. The tool needs title, date, and time. The title is \"dentist\", the date is 2026-07-01, and the time is 09:30. I should make sure the date and time are in the correct format. The date is already in YYYY-MM-DD, which is standard. The time is 09:30, which is 24-hour format. That should be correct. I don't need any additional parameters like location or description since the user didn't specify. So I'll proceed with the tool call using these exact values.\n",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 4073903248,
+    "load_duration": 637220250,
+    "prompt_eval_count": 122,
+    "prompt_eval_duration": 44099000,
+    "eval_count": 219,
+    "eval_duration": 3318864000
+  },
+  "elapsed_seconds": 4.46
+}

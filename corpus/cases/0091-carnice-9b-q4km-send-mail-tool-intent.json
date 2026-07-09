@@ -1,0 +1,53 @@
+{
+  "id": "0091-carnice-9b-q4km-send-mail-tool-intent",
+  "provenance": {
+    "kind": "captured",
+    "model": "carnice:9b-q4km",
+    "runtime": "ollama",
+    "harness": "ollama-api-generate",
+    "prompt_id": "send-mail-tool-intent",
+    "temperature": "0",
+    "captured": "2026-06-14",
+    "source": "gpu-capture-panel raw=captures/raw/2026-06-14/carnice-9b-q4km/batch20/0091-send-mail-tool-intent.txt meta=captures/raw/2026-06-14/carnice-9b-q4km/batch20/0091-send-mail-tool-intent.json",
+    "sampler": "temperature=0,num_predict=384"
+  },
+  "request_tools": [
+    {
+      "name": "send_mail",
+      "description": "Send an email.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "to": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "to",
+          "subject",
+          "body"
+        ]
+      }
+    }
+  ],
+  "raw_output": "{\"name\":\"send_mail\",\"arguments\":{\"to\":\"alex@example.com\",\"subject\":\"Lunch\",\"body\":\"See you at noon.\"}}",
+  "taxonomy": [
+    "json_in_content"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "send_mail",
+    "arguments": {
+      "to": "alex@example.com",
+      "subject": "Lunch",
+      "body": "See you at noon."
+    }
+  },
+  "note": "The emitted text contains a complete call-like json_in_content shape naming the offered tool with all gold arguments directly recoverable."
+}

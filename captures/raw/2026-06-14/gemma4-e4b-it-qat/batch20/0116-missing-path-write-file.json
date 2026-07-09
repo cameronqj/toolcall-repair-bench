@@ -1,0 +1,45 @@
+{
+  "case_id": "0116-gemma4-e4b-it-qat-missing-path-write-file",
+  "prompt_id": "missing-path-write-file",
+  "natural_output_class": "missing_required_args",
+  "model": "gemma4:e4b-it-qat",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "write_file",
+      "description": "Write content to a file.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "content"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"write_file\",\"description\":\"Write content to a file.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"},\"content\":{\"type\":\"string\"}},\"required\":[\"path\",\"content\"]}}\n\nUser request: Write this text to the file: hello from batch twenty.",
+  "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0116-missing-path-write-file.txt",
+  "ollama_response_metadata": {
+    "model": "gemma4:e4b-it-qat",
+    "created_at": "2026-06-14T14:13:39.066064772Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 2519716299,
+    "load_duration": 826681220,
+    "prompt_eval_count": 111,
+    "prompt_eval_duration": 43420000,
+    "eval_count": 131,
+    "eval_duration": 1641951000
+  },
+  "elapsed_seconds": 2.916
+}

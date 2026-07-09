@@ -1,0 +1,41 @@
+{
+  "id": "0026-ambiguous-two-tools",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models an ambiguous-tool-choice case where conservative non-repair is correct.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "move_file",
+      "description": "Move a file from a source path to a destination path, removing the original.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "src": { "type": "string", "description": "Source path." },
+          "dst": { "type": "string", "description": "Destination path." }
+        },
+        "required": ["src", "dst"]
+      }
+    },
+    {
+      "name": "copy_file",
+      "description": "Copy a file from a source path to a destination path, leaving the original in place.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "src": { "type": "string", "description": "Source path." },
+          "dst": { "type": "string", "description": "Destination path." }
+        },
+        "required": ["src", "dst"]
+      }
+    }
+  ],
+  "raw_output": "Sure, I'll relocate report.pdf into the archive/ folder for you now.",
+  "taxonomy": ["ambiguous_tool_choice"],
+  "gold": { "type": "no_tool" },
+  "note": "\"Relocate\" fits both move_file and copy_file equally and the output never commits to keeping or removing the original, so choosing either tool would be a guess; no_tool is the correct conservative label."
+}

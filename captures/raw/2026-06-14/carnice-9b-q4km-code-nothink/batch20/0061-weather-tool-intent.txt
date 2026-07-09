@@ -1,0 +1,2 @@
+<think>
+Okay, so the user is asking about the weather in Seattle using imperial units. Let me check the available tools. There's a get_weather tool that takes city and units as parameters. The units can be metric or imperial. Since the user specified imperial, I need to set units to "imperial". The city is Seattle. I should call the get_weather function with those parameters. Let me make sure there are no typos in the city name. Seattle is spelled correctly. Alright, time to make the tool call.

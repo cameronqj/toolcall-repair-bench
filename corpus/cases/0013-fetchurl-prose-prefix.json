@@ -1,0 +1,44 @@
+{
+  "id": "0013-fetchurl-prose-prefix",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models the json_with_prose failure shape common to small local models.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "fetch_url",
+      "description": "Fetch the contents of a URL.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          },
+          "method": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      }
+    }
+  ],
+  "raw_output": "I'll grab that page for you.\n{\"name\": \"fetch_url\", \"arguments\": {\"url\": \"https://example.com/status\", \"method\": \"GET\"}}\n",
+  "taxonomy": [
+    "json_with_prose"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "fetch_url",
+    "arguments": {
+      "url": "https://example.com/status",
+      "method": "GET"
+    }
+  },
+  "note": "A leading prose sentence precedes a well-formed fetch_url JSON call; ignoring the preamble yields the call with url and method copied verbatim."
+}

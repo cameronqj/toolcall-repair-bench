@@ -1,0 +1,50 @@
+{
+  "case_id": "0081-carnice-9b-q4km-weather-tool-intent",
+  "prompt_id": "weather-tool-intent",
+  "natural_output_class": "semi_structured_repairable",
+  "model": "carnice:9b-q4km",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "get_weather",
+      "description": "Get current weather for a city.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string"
+          },
+          "units": {
+            "type": "string",
+            "enum": [
+              "metric",
+              "imperial"
+            ]
+          }
+        },
+        "required": [
+          "city",
+          "units"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"get_weather\",\"description\":\"Get current weather for a city.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\"},\"units\":{\"type\":\"string\",\"enum\":[\"metric\",\"imperial\"]}},\"required\":[\"city\",\"units\"]}}\n\nUser request: What's the weather in Seattle in imperial units?",
+  "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0081-weather-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "carnice:9b-q4km",
+    "created_at": "2026-06-14T14:11:11.592172393Z",
+    "thinking": "Okay, the user is asking for the weather in Seattle using imperial units. I need to use the get_weather tool with the city set to Seattle and units as imperial. Let me check the parameters. The city is required, and units can be metric or imperial. The user specified imperial, so that's correct. I'll call the tool with those parameters.\n",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 2317801148,
+    "load_duration": 643528314,
+    "prompt_eval_count": 108,
+    "prompt_eval_duration": 43722000,
+    "eval_count": 99,
+    "eval_duration": 1490530000
+  },
+  "elapsed_seconds": 2.682
+}

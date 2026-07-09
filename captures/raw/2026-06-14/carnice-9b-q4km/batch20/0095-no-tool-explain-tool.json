@@ -1,0 +1,42 @@
+{
+  "case_id": "0095-carnice-9b-q4km-no-tool-explain-tool",
+  "prompt_id": "no-tool-explain-tool",
+  "natural_output_class": "no_tool",
+  "model": "carnice:9b-q4km",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "fetch_url",
+      "description": "Fetch a URL.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. Do not call a tool unless the user explicitly asks you to perform an external action.\n\nAvailable tools:\n{\"name\":\"fetch_url\",\"description\":\"Fetch a URL.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\"}},\"required\":[\"url\"]}}\n\nUser request: Explain in one sentence when someone would use fetch_url. Do not fetch anything.",
+  "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0095-no-tool-explain-tool.txt",
+  "ollama_response_metadata": {
+    "model": "carnice:9b-q4km",
+    "created_at": "2026-06-14T14:12:09.211032872Z",
+    "thinking": "Okay, the user wants me to explain in one sentence when someone would use fetch_url. Let me start by understanding what fetch_url does. From the tool description, it's used to fetch a URL. So, the main purpose is to retrieve content from a web address.\n\nNow, the user specifies not to fetch anything, which makes sense because they just want an explanation. I need to make sure my answer is concise and fits into a single sentence. Let me think about the scenarios where someone would use this tool. For example, when a developer needs to get data from an API, or when they want to check the content of a webpage programmatically.\n\nI should avoid technical jargon to keep it clear. Maybe something like: \"Someone would use fetch_url when they need to retrieve data from a specific web address, such as an API endpoint or a webpage, without manually visiting it.\" Wait, but that's a bit long. Let me shorten it.\n\nAnother angle: \"Use fetch_url when you need to programmatically retrieve the content of a URL, like for data scraping or API integration.\" Hmm, but the user wants a single sentence. Let me check the constraints again. The answer must be one sentence, no fetching, and explain when to use it.\n\nI think the key points are: retrieving data from a URL, programmatically, without manual intervention. So combining those: \"You would use fetch_url when you need to programmatically retrieve the content of a specific web address, such as an API endpoint or webpage, without manually visiting it.\" That's one sentence. Let me check if it's clear and concise. Yes, it covers the main use case and avoids unnecessary details.\n",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 6605482725,
+    "load_duration": 655391069,
+    "prompt_eval_count": 93,
+    "prompt_eval_duration": 78703000,
+    "eval_count": 382,
+    "eval_duration": 5804793000
+  },
+  "elapsed_seconds": 6.983
+}

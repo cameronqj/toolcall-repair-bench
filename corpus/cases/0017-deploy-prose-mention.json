@@ -1,0 +1,44 @@
+{
+  "id": "0017-deploy-prose-mention",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models a prose-mention no-tool response where a tool name appears in narration but no call is made.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "deploy_service",
+      "description": "Deploy a named service to a target environment.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "service": {
+            "type": "string"
+          },
+          "environment": {
+            "type": "string",
+            "enum": [
+              "staging",
+              "production"
+            ]
+          }
+        },
+        "required": [
+          "service",
+          "environment"
+        ]
+      }
+    }
+  ],
+  "raw_output": "I could deploy_service to production for you, but I'd hold off for now. The staging logs from the last build show a spike in 500s on the checkout path, and pushing that to prod would carry the regression forward. Review those logs first, and once they're clean let me know and I'll roll it out.",
+  "taxonomy": [
+    "prose_false_positive"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "The model names `deploy_service` in prose while explicitly declining to deploy until the user reviews logs; no call was emitted, so no_tool is correct and a name-matching repairer would fabricate a deploy."
+}

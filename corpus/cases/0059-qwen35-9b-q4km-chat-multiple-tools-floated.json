@@ -1,0 +1,58 @@
+{
+  "id": "0059-qwen35-9b-q4km-chat-multiple-tools-floated",
+  "provenance": {
+    "kind": "captured",
+    "model": "qwen35:9b-q4km-chat",
+    "runtime": "ollama",
+    "harness": "ollama-api-generate",
+    "prompt_id": "multiple-tools-floated",
+    "temperature": "0",
+    "captured": "2026-06-14",
+    "source": "gpu-capture-panel raw=captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0059-multiple-tools-floated.txt meta=captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0059-multiple-tools-floated.json",
+    "sampler": "temperature=0,num_predict=384"
+  },
+  "request_tools": [
+    {
+      "name": "search_web",
+      "description": "Search the web.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    },
+    {
+      "name": "fetch_url",
+      "description": "Fetch a URL.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      }
+    }
+  ],
+  "raw_output": "<think>\n\n</think>\n\n{\n  \"content\": \"{\\n  \\\"name\\\": \\\"search_web\\\",\\n  \\\"arguments\\\": {\\n    \\\"query\\\": \\\"Python packaging best practices\\\"\\n  }\\n}\"\n}",
+  "taxonomy": [
+    "json_in_content"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "search_web",
+    "arguments": {
+      "query": "Python packaging best practices"
+    }
+  },
+  "note": "The emitted content field wraps a complete search_web call with a concrete query argument."
+}

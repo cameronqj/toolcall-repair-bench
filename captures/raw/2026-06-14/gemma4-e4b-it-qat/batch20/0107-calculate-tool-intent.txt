@@ -1,0 +1,1 @@
+{"tool_name": "calculate", "parameters": {"expression": "17 * 23 + 5"}}

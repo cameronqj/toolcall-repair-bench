@@ -1,0 +1,39 @@
+{
+  "id": "0033-would-call-search-prose",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "synthetic": true,
+    "source": "Hand-authored negative control: prose stating the model would call a tool, conditional on missing info, without emitting a call."
+  },
+  "request_tools": [
+    {
+      "name": "search",
+      "description": "Search invoices.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          },
+          "range": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  ],
+  "raw_output": "If you give me the date range, I would call search to pull the matching invoices. What range should I use?",
+  "taxonomy": [
+    "prose_false_positive"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "The model names the tool in conditional prose and asks for missing information instead of calling. There is no call to recover; fabricating one would invent the query and range. no_tool is correct."
+}

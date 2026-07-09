@@ -1,0 +1,56 @@
+{
+  "case_id": "0057-qwen35-9b-q4km-chat-ambiguous-lookup",
+  "prompt_id": "ambiguous-lookup",
+  "natural_output_class": "structured_repairable",
+  "model": "qwen35:9b-q4km-chat",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "search_web",
+      "description": "Search the web.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    },
+    {
+      "name": "fetch_url",
+      "description": "Fetch a URL.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"search_web\",\"description\":\"Search the web.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"query\":{\"type\":\"string\"}},\"required\":[\"query\"]}}\n{\"name\":\"fetch_url\",\"description\":\"Fetch a URL.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\"}},\"required\":[\"url\"]}}\n\nUser request: Look this up for me.",
+  "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0057-ambiguous-lookup.txt",
+  "ollama_response_metadata": {
+    "model": "qwen35:9b-q4km-chat",
+    "created_at": "2026-06-14T14:08:36.707860403Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1421611126,
+    "load_duration": 647073276,
+    "prompt_eval_count": 116,
+    "prompt_eval_duration": 87272000,
+    "eval_count": 37,
+    "eval_duration": 615197000
+  },
+  "elapsed_seconds": 1.822
+}

@@ -1,0 +1,1 @@
+You would use fetch_url when you need to programmatically retrieve the content of a specific web address, such as an API endpoint or webpage, without manually visiting it.

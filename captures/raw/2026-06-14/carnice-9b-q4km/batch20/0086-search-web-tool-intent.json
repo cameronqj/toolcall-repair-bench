@@ -1,0 +1,42 @@
+{
+  "case_id": "0086-carnice-9b-q4km-search-web-tool-intent",
+  "prompt_id": "search-web-tool-intent",
+  "natural_output_class": "semi_structured_repairable",
+  "model": "carnice:9b-q4km",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "search_web",
+      "description": "Search the web.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"search_web\",\"description\":\"Search the web.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"query\":{\"type\":\"string\"}},\"required\":[\"query\"]}}\n\nUser request: Search the web for llama.cpp Gemma 4 context window.",
+  "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0086-search-web-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "carnice:9b-q4km",
+    "created_at": "2026-06-14T14:11:30.184933846Z",
+    "thinking": "The user is asking me to search for information about llama.cpp Gemma 4 context window. This seems to be a technical question about a specific AI model (Gemma 4) and its context window capabilities when used with llama.cpp. Let me search for this information.\n",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 2399630865,
+    "load_duration": 715330635,
+    "prompt_eval_count": 92,
+    "prompt_eval_duration": 78071000,
+    "eval_count": 102,
+    "eval_duration": 1533845000
+  },
+  "elapsed_seconds": 2.761
+}

@@ -1,0 +1,49 @@
+{
+  "case_id": "0141-gemma4-e2b-code-weather-tool-intent",
+  "prompt_id": "weather-tool-intent",
+  "natural_output_class": "semi_structured_repairable",
+  "model": "gemma4:e2b-code",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "get_weather",
+      "description": "Get current weather for a city.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string"
+          },
+          "units": {
+            "type": "string",
+            "enum": [
+              "metric",
+              "imperial"
+            ]
+          }
+        },
+        "required": [
+          "city",
+          "units"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"get_weather\",\"description\":\"Get current weather for a city.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"city\":{\"type\":\"string\"},\"units\":{\"type\":\"string\",\"enum\":[\"metric\",\"imperial\"]}},\"required\":[\"city\",\"units\"]}}\n\nUser request: What's the weather in Seattle in imperial units?",
+  "raw_path": "captures/raw/2026-06-14/gemma4-e2b-code/batch20/0141-weather-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "gemma4:e2b-code",
+    "created_at": "2026-06-14T14:18:41.16830037Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 124794716037,
+    "load_duration": 122720137396,
+    "prompt_eval_count": 117,
+    "prompt_eval_duration": 545172000,
+    "eval_count": 138,
+    "eval_duration": 1454377000
+  },
+  "elapsed_seconds": 127.285
+}

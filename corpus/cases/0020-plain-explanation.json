@@ -1,0 +1,40 @@
+{
+  "id": "0020-plain-explanation",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models a conceptual explanation in prose with an unused, unnamed tool.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "run_code",
+      "description": "Execute a snippet of code in a sandbox and return stdout.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "language",
+          "source"
+        ]
+      }
+    }
+  ],
+  "raw_output": "Recursion is when a function solves a problem by calling itself on a smaller version of that problem. Each call peels off a layer until it reaches a base case that can be answered directly, and then the partial results unwind back up the chain. The key risks are forgetting the base case, which causes infinite recursion, and going so deep that you exhaust the call stack.",
+  "taxonomy": [
+    "plain_answer"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "The user asked for a conceptual explanation, not for code to be executed; the `run_code` tool is unneeded and unnamed, so no_tool is correct."
+}

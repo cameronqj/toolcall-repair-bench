@@ -1,0 +1,49 @@
+{
+  "id": "0009-create-event-xml",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models the xml_tool_code failure shape common to small local models.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "create_calendar_event",
+      "description": "Create a calendar event.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "start": {
+            "type": "string"
+          },
+          "duration_minutes": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "title",
+          "start"
+        ]
+      }
+    }
+  ],
+  "raw_output": "<tool_call>{\"name\": \"create_calendar_event\", \"arguments\": {\"title\": \"Dentist\", \"start\": \"2026-06-20T09:30\", \"duration_minutes\": 45}}</tool_call>\n",
+  "taxonomy": [
+    "xml_tool_code"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "create_calendar_event",
+    "arguments": {
+      "title": "Dentist",
+      "start": "2026-06-20T09:30",
+      "duration_minutes": 45
+    }
+  },
+  "note": "Stripping the <tool_call> XML wrapper exposes a complete JSON tool call; name and all argument values come directly from the enclosed object."
+}

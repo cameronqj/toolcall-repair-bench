@@ -1,0 +1,48 @@
+{
+  "id": "0043-qwen35-9b-q4km-chat-write-file-tool-intent",
+  "provenance": {
+    "kind": "captured",
+    "model": "qwen35:9b-q4km-chat",
+    "runtime": "ollama",
+    "harness": "ollama-api-generate",
+    "prompt_id": "write-file-tool-intent",
+    "temperature": "0",
+    "captured": "2026-06-14",
+    "source": "gpu-capture-panel raw=captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0043-write-file-tool-intent.txt meta=captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0043-write-file-tool-intent.json",
+    "sampler": "temperature=0,num_predict=384"
+  },
+  "request_tools": [
+    {
+      "name": "write_file",
+      "description": "Write content to a file.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "content"
+        ]
+      }
+    }
+  ],
+  "raw_output": "<think>\n\n</think>\n\n```json\n{\"name\": \"write_file\", \"arguments\": {\"path\": \"notes/todo.txt\", \"content\": \"alpha beta\"}}\n```",
+  "taxonomy": [
+    "markdown_fenced_json"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "write_file",
+    "arguments": {
+      "path": "notes/todo.txt",
+      "content": "alpha beta"
+    }
+  },
+  "note": "The emitted text contains a complete call-like markdown_fenced_json shape naming the offered tool with all gold arguments directly recoverable."
+}

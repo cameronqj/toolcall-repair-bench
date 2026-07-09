@@ -1,0 +1,44 @@
+{
+  "id": "0008-settimer-unquoted-keys",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models the toolName_brace_json failure shape common to small local models.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "set_timer",
+      "description": "Set a countdown timer.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "minutes": {
+            "type": "integer"
+          },
+          "label": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "minutes"
+        ]
+      }
+    }
+  ],
+  "raw_output": "set_timer{minutes: 10, label: \"tea steeping\"}\n",
+  "taxonomy": [
+    "toolName_brace_json"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "set_timer",
+    "arguments": {
+      "minutes": 10,
+      "label": "tea steeping"
+    }
+  },
+  "note": "The brace block uses unquoted keys but valid JSON values; quoting the keys produces the set_timer call with minutes and label taken verbatim."
+}

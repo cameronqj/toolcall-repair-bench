@@ -1,0 +1,49 @@
+{
+  "case_id": "0111-gemma4-e4b-it-qat-send-mail-tool-intent",
+  "prompt_id": "send-mail-tool-intent",
+  "natural_output_class": "semi_structured_repairable",
+  "model": "gemma4:e4b-it-qat",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "send_mail",
+      "description": "Send an email.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "to": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "to",
+          "subject",
+          "body"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"send_mail\",\"description\":\"Send an email.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"to\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"body\":{\"type\":\"string\"}},\"required\":[\"to\",\"subject\",\"body\"]}}\n\nUser request: Send an email to alex@example.com with subject Lunch and body See you at noon.",
+  "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0111-send-mail-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "gemma4:e4b-it-qat",
+    "created_at": "2026-06-14T14:13:24.737151563Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 2461698319,
+    "load_duration": 878841407,
+    "prompt_eval_count": 125,
+    "prompt_eval_duration": 48350000,
+    "eval_count": 122,
+    "eval_duration": 1527764000
+  },
+  "elapsed_seconds": 2.819
+}

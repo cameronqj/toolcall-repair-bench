@@ -1,0 +1,56 @@
+{
+  "case_id": "0159-gemma4-e2b-code-multiple-tools-floated",
+  "prompt_id": "multiple-tools-floated",
+  "natural_output_class": "semi_structured_repairable",
+  "model": "gemma4:e2b-code",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "search_web",
+      "description": "Search the web.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    },
+    {
+      "name": "fetch_url",
+      "description": "Fetch a URL.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "url"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"search_web\",\"description\":\"Search the web.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"query\":{\"type\":\"string\"}},\"required\":[\"query\"]}}\n{\"name\":\"fetch_url\",\"description\":\"Fetch a URL.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"url\":{\"type\":\"string\"}},\"required\":[\"url\"]}}\n\nUser request: Maybe search or fetch something about Python packaging; whatever seems right.",
+  "raw_path": "captures/raw/2026-06-14/gemma4-e2b-code/batch20/0159-multiple-tools-floated.txt",
+  "ollama_response_metadata": {
+    "model": "gemma4:e2b-code",
+    "created_at": "2026-06-14T14:19:37.410272403Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 3590388567,
+    "load_duration": 894093930,
+    "prompt_eval_count": 137,
+    "prompt_eval_duration": 35616000,
+    "eval_count": 295,
+    "eval_duration": 2654461000
+  },
+  "elapsed_seconds": 3.982
+}

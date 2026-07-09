@@ -1,0 +1,40 @@
+{
+  "id": "0036-table-data-in-answer",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "synthetic": true,
+    "source": "Hand-authored negative control: a Markdown table of data returned as the answer, with no tool intent."
+  },
+  "request_tools": [
+    {
+      "name": "create_record",
+      "description": "Insert a row into a table.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "table": {
+            "type": "string"
+          },
+          "values": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "table",
+          "values"
+        ]
+      }
+    }
+  ],
+  "raw_output": "Here are the three rows you asked about:\n\n| id | name  |\n|----|-------|\n| 1  | Ada   |\n| 2  | Linus |\n| 3  | Grace |\n\nLet me know if you want them exported.",
+  "taxonomy": [
+    "structured_data_no_intent"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "The structured data is the answer to the user's question, not arguments for create_record. There is no call to recover; building one would invent table and values. no_tool is correct."
+}

@@ -1,0 +1,6 @@
+```json
+{
+  "title": "Example Book",
+  "author": "John Doe"
+}
+```

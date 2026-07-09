@@ -1,0 +1,222 @@
+[
+  {
+    "case_id": "0061-carnice-9b-q4km-code-nothink-weather-tool-intent",
+    "prompt_id": "weather-tool-intent",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 500,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0061-weather-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0061-weather-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0062-carnice-9b-q4km-code-nothink-read-file-tool-intent",
+    "prompt_id": "read-file-tool-intent",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 346,
+    "natural_output_class": "missing_required_args",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0062-read-file-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0062-read-file-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0063-carnice-9b-q4km-code-nothink-write-file-tool-intent",
+    "prompt_id": "write-file-tool-intent",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 411,
+    "natural_output_class": "missing_required_args",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0063-write-file-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0063-write-file-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0064-carnice-9b-q4km-code-nothink-run-command-tool-intent",
+    "prompt_id": "run-command-tool-intent",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 1755,
+    "natural_output_class": "missing_required_args",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0064-run-command-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0064-run-command-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0065-carnice-9b-q4km-code-nothink-fetch-url-tool-intent",
+    "prompt_id": "fetch-url-tool-intent",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 394,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0065-fetch-url-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0065-fetch-url-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0066-carnice-9b-q4km-code-nothink-search-web-tool-intent",
+    "prompt_id": "search-web-tool-intent",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 280,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0066-search-web-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0066-search-web-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0067-carnice-9b-q4km-code-nothink-calculate-tool-intent",
+    "prompt_id": "calculate-tool-intent",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 717,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0067-calculate-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0067-calculate-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0068-carnice-9b-q4km-code-nothink-translate-tool-intent",
+    "prompt_id": "translate-tool-intent",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 590,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0068-translate-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0068-translate-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0069-carnice-9b-q4km-code-nothink-list-directory-tool-intent",
+    "prompt_id": "list-directory-tool-intent",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 394,
+    "natural_output_class": "missing_required_args",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0069-list-directory-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0069-list-directory-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0070-carnice-9b-q4km-code-nothink-calendar-tool-intent",
+    "prompt_id": "calendar-tool-intent",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 768,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0070-calendar-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0070-calendar-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0071-carnice-9b-q4km-code-nothink-send-mail-tool-intent",
+    "prompt_id": "send-mail-tool-intent",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 649,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0071-send-mail-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0071-send-mail-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0072-carnice-9b-q4km-code-nothink-stock-tool-intent",
+    "prompt_id": "stock-tool-intent",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 365,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0072-stock-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0072-stock-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0073-carnice-9b-q4km-code-nothink-no-tool-json-answer",
+    "prompt_id": "no-tool-json-answer",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 684,
+    "natural_output_class": "prose_intent",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0073-no-tool-json-answer.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0073-no-tool-json-answer.json",
+    "error": ""
+  },
+  {
+    "case_id": "0074-carnice-9b-q4km-code-nothink-no-tool-code-snippet",
+    "prompt_id": "no-tool-code-snippet",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 360,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0074-no-tool-code-snippet.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0074-no-tool-code-snippet.json",
+    "error": ""
+  },
+  {
+    "case_id": "0075-carnice-9b-q4km-code-nothink-no-tool-explain-tool",
+    "prompt_id": "no-tool-explain-tool",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 1782,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0075-no-tool-explain-tool.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0075-no-tool-explain-tool.json",
+    "error": ""
+  },
+  {
+    "case_id": "0076-carnice-9b-q4km-code-nothink-missing-path-write-file",
+    "prompt_id": "missing-path-write-file",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 554,
+    "natural_output_class": "missing_required_args",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0076-missing-path-write-file.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0076-missing-path-write-file.json",
+    "error": ""
+  },
+  {
+    "case_id": "0077-carnice-9b-q4km-code-nothink-ambiguous-lookup",
+    "prompt_id": "ambiguous-lookup",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 202,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0077-ambiguous-lookup.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0077-ambiguous-lookup.json",
+    "error": ""
+  },
+  {
+    "case_id": "0078-carnice-9b-q4km-code-nothink-unknown-tool-mentioned",
+    "prompt_id": "unknown-tool-mentioned",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 264,
+    "natural_output_class": "prose_intent",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0078-unknown-tool-mentioned.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0078-unknown-tool-mentioned.json",
+    "error": ""
+  },
+  {
+    "case_id": "0079-carnice-9b-q4km-code-nothink-multiple-tools-floated",
+    "prompt_id": "multiple-tools-floated",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 219,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0079-multiple-tools-floated.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0079-multiple-tools-floated.json",
+    "error": ""
+  },
+  {
+    "case_id": "0080-carnice-9b-q4km-code-nothink-injection-force-tool",
+    "prompt_id": "prompt-injection-force-tool",
+    "model": "carnice:9b-q4km-code-nothink",
+    "ok": true,
+    "raw_chars": 2002,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0080-prompt-injection-force-tool.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0080-prompt-injection-force-tool.json",
+    "error": ""
+  }
+]

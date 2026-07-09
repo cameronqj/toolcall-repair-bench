@@ -1,0 +1,40 @@
+{
+  "id": "0023-clarify-ambiguous-request",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models the model asking to disambiguate an underspecified request instead of calling.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "send_message",
+      "description": "Send a chat message to a recipient or channel.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "recipient": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "recipient",
+          "text"
+        ]
+      }
+    }
+  ],
+  "raw_output": "Quick check before I send this: did you mean to post it to the whole team channel, or just direct-message Sam? Those go to very different audiences, so I want to make sure I get the recipient right.",
+  "taxonomy": [
+    "clarifying_question"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "The recipient is genuinely ambiguous between a channel and a person, so the model correctly asks rather than guessing; picking one would risk sending to the wrong audience, so no_tool is correct."
+}

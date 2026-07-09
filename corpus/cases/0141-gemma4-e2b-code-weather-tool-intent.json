@@ -1,0 +1,52 @@
+{
+  "id": "0141-gemma4-e2b-code-weather-tool-intent",
+  "provenance": {
+    "kind": "captured",
+    "model": "gemma4:e2b-code",
+    "runtime": "ollama",
+    "harness": "ollama-api-generate",
+    "prompt_id": "weather-tool-intent",
+    "temperature": "0",
+    "captured": "2026-06-14",
+    "source": "gpu-capture-panel raw=captures/raw/2026-06-14/gemma4-e2b-code/batch20/0141-weather-tool-intent.txt meta=captures/raw/2026-06-14/gemma4-e2b-code/batch20/0141-weather-tool-intent.json",
+    "sampler": "temperature=0,num_predict=384"
+  },
+  "request_tools": [
+    {
+      "name": "get_weather",
+      "description": "Get current weather for a city.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string"
+          },
+          "units": {
+            "type": "string",
+            "enum": [
+              "metric",
+              "imperial"
+            ]
+          }
+        },
+        "required": [
+          "city",
+          "units"
+        ]
+      }
+    }
+  ],
+  "raw_output": "{\"tool_call\":\"get_weather\",\"parameters\":{\"city\":\"Seattle\",\"units\":\"imperial\"}}",
+  "taxonomy": [
+    "provider_specific"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "get_weather",
+    "arguments": {
+      "city": "Seattle",
+      "units": "imperial"
+    }
+  },
+  "note": "The output uses a provider-specific `tool_call` field with a parameters object containing the required weather arguments."
+}

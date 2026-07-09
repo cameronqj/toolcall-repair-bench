@@ -1,0 +1,29 @@
+{
+  "id": "0027-truncated-json-call",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models a truncated-tool-call case where conservative non-repair is correct.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "create_record",
+      "description": "Insert a new row into a database table.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "table": { "type": "string", "description": "Target table name." },
+          "values": { "type": "object", "description": "Column-to-value map for the new row." }
+        },
+        "required": ["table", "values"]
+      }
+    }
+  ],
+  "raw_output": "{\"name\": \"create_record\", \"arguments\": {\"table\": \"users\", \"values\": {\"email\": \"a@b.c",
+  "taxonomy": ["truncated_tool_call"],
+  "gold": { "type": "no_tool" },
+  "note": "The output is cut off mid-string with an unterminated email value and no closing braces, so completing the call would require guessing the rest of the email and any remaining columns; no_tool is the correct conservative label."
+}

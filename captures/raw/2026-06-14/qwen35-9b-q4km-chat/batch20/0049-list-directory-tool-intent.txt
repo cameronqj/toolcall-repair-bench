@@ -1,0 +1,10 @@
+<think>
+
+</think>
+
+{
+  "name": "list_directory",
+  "arguments": {
+    "path": "/tmp"
+  }
+}

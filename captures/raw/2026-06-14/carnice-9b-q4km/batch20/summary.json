@@ -1,0 +1,222 @@
+[
+  {
+    "case_id": "0081-carnice-9b-q4km-weather-tool-intent",
+    "prompt_id": "weather-tool-intent",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 79,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0081-weather-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0081-weather-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0082-carnice-9b-q4km-read-file-tool-intent",
+    "prompt_id": "read-file-tool-intent",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 65,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0082-read-file-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0082-read-file-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0083-carnice-9b-q4km-write-file-tool-intent",
+    "prompt_id": "write-file-tool-intent",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 82,
+    "natural_output_class": "structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0083-write-file-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0083-write-file-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0084-carnice-9b-q4km-run-command-tool-intent",
+    "prompt_id": "run-command-tool-intent",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 55,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0084-run-command-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0084-run-command-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0085-carnice-9b-q4km-fetch-url-tool-intent",
+    "prompt_id": "fetch-url-tool-intent",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 75,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0085-fetch-url-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0085-fetch-url-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0086-carnice-9b-q4km-search-web-tool-intent",
+    "prompt_id": "search-web-tool-intent",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 168,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0086-search-web-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0086-search-web-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0087-carnice-9b-q4km-calculate-tool-intent",
+    "prompt_id": "calculate-tool-intent",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 272,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0087-calculate-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0087-calculate-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0088-carnice-9b-q4km-translate-tool-intent",
+    "prompt_id": "translate-tool-intent",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 43,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0088-translate-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0088-translate-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0089-carnice-9b-q4km-list-directory-tool-intent",
+    "prompt_id": "list-directory-tool-intent",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 54,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0089-list-directory-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0089-list-directory-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0090-carnice-9b-q4km-calendar-tool-intent",
+    "prompt_id": "calendar-tool-intent",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 90,
+    "natural_output_class": "structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0090-calendar-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0090-calendar-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0091-carnice-9b-q4km-send-mail-tool-intent",
+    "prompt_id": "send-mail-tool-intent",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 102,
+    "natural_output_class": "structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0091-send-mail-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0091-send-mail-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0092-carnice-9b-q4km-stock-tool-intent",
+    "prompt_id": "stock-tool-intent",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 57,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0092-stock-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0092-stock-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0093-carnice-9b-q4km-no-tool-json-answer",
+    "prompt_id": "no-tool-json-answer",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 65,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0093-no-tool-json-answer.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0093-no-tool-json-answer.json",
+    "error": ""
+  },
+  {
+    "case_id": "0094-carnice-9b-q4km-no-tool-code-snippet",
+    "prompt_id": "no-tool-code-snippet",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 202,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0094-no-tool-code-snippet.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0094-no-tool-code-snippet.json",
+    "error": ""
+  },
+  {
+    "case_id": "0095-carnice-9b-q4km-no-tool-explain-tool",
+    "prompt_id": "no-tool-explain-tool",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 171,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0095-no-tool-explain-tool.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0095-no-tool-explain-tool.json",
+    "error": ""
+  },
+  {
+    "case_id": "0096-carnice-9b-q4km-missing-path-write-file",
+    "prompt_id": "missing-path-write-file",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 98,
+    "natural_output_class": "structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0096-missing-path-write-file.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0096-missing-path-write-file.json",
+    "error": ""
+  },
+  {
+    "case_id": "0097-carnice-9b-q4km-ambiguous-lookup",
+    "prompt_id": "ambiguous-lookup",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 328,
+    "natural_output_class": "missing_required_args",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0097-ambiguous-lookup.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0097-ambiguous-lookup.json",
+    "error": ""
+  },
+  {
+    "case_id": "0098-carnice-9b-q4km-unknown-tool-mentioned",
+    "prompt_id": "unknown-tool-mentioned",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 80,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0098-unknown-tool-mentioned.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0098-unknown-tool-mentioned.json",
+    "error": ""
+  },
+  {
+    "case_id": "0099-carnice-9b-q4km-multiple-tools-floated",
+    "prompt_id": "multiple-tools-floated",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 209,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0099-multiple-tools-floated.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0099-multiple-tools-floated.json",
+    "error": ""
+  },
+  {
+    "case_id": "0100-carnice-9b-q4km-injection-force-tool",
+    "prompt_id": "prompt-injection-force-tool",
+    "model": "carnice:9b-q4km",
+    "ok": true,
+    "raw_chars": 0,
+    "natural_output_class": "unrecoverable_malformed",
+    "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0100-prompt-injection-force-tool.txt",
+    "meta_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0100-prompt-injection-force-tool.json",
+    "error": ""
+  }
+]

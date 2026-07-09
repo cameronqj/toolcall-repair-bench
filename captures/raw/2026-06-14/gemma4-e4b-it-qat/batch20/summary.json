@@ -1,0 +1,222 @@
+[
+  {
+    "case_id": "0101-gemma4-e4b-it-qat-weather-tool-intent",
+    "prompt_id": "weather-tool-intent",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 78,
+    "natural_output_class": "structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0101-weather-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0101-weather-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0102-gemma4-e4b-it-qat-read-file-tool-intent",
+    "prompt_id": "read-file-tool-intent",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 70,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0102-read-file-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0102-read-file-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0103-gemma4-e4b-it-qat-write-file-tool-intent",
+    "prompt_id": "write-file-tool-intent",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 88,
+    "natural_output_class": "structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0103-write-file-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0103-write-file-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0104-gemma4-e4b-it-qat-run-command-tool-intent",
+    "prompt_id": "run-command-tool-intent",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 71,
+    "natural_output_class": "structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0104-run-command-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0104-run-command-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0105-gemma4-e4b-it-qat-fetch-url-tool-intent",
+    "prompt_id": "fetch-url-tool-intent",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 80,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0105-fetch-url-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0105-fetch-url-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0106-gemma4-e4b-it-qat-search-web-tool-intent",
+    "prompt_id": "search-web-tool-intent",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 98,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0106-search-web-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0106-search-web-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0107-gemma4-e4b-it-qat-calculate-tool-intent",
+    "prompt_id": "calculate-tool-intent",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 71,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0107-calculate-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0107-calculate-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0108-gemma4-e4b-it-qat-translate-tool-intent",
+    "prompt_id": "translate-tool-intent",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 97,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0108-translate-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0108-translate-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0109-gemma4-e4b-it-qat-list-directory-tool-intent",
+    "prompt_id": "list-directory-tool-intent",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 59,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0109-list-directory-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0109-list-directory-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0110-gemma4-e4b-it-qat-calendar-tool-intent",
+    "prompt_id": "calendar-tool-intent",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 113,
+    "natural_output_class": "structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0110-calendar-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0110-calendar-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0111-gemma4-e4b-it-qat-send-mail-tool-intent",
+    "prompt_id": "send-mail-tool-intent",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 112,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0111-send-mail-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0111-send-mail-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0112-gemma4-e4b-it-qat-stock-tool-intent",
+    "prompt_id": "stock-tool-intent",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 75,
+    "natural_output_class": "structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0112-stock-tool-intent.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0112-stock-tool-intent.json",
+    "error": ""
+  },
+  {
+    "case_id": "0113-gemma4-e4b-it-qat-no-tool-json-answer",
+    "prompt_id": "no-tool-json-answer",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 114,
+    "natural_output_class": "semi_structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0113-no-tool-json-answer.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0113-no-tool-json-answer.json",
+    "error": ""
+  },
+  {
+    "case_id": "0114-gemma4-e4b-it-qat-no-tool-code-snippet",
+    "prompt_id": "no-tool-code-snippet",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 51,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0114-no-tool-code-snippet.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0114-no-tool-code-snippet.json",
+    "error": ""
+  },
+  {
+    "case_id": "0115-gemma4-e4b-it-qat-no-tool-explain-tool",
+    "prompt_id": "no-tool-explain-tool",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 133,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0115-no-tool-explain-tool.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0115-no-tool-explain-tool.json",
+    "error": ""
+  },
+  {
+    "case_id": "0116-gemma4-e4b-it-qat-missing-path-write-file",
+    "prompt_id": "missing-path-write-file",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 90,
+    "natural_output_class": "missing_required_args",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0116-missing-path-write-file.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0116-missing-path-write-file.json",
+    "error": ""
+  },
+  {
+    "case_id": "0117-gemma4-e4b-it-qat-ambiguous-lookup",
+    "prompt_id": "ambiguous-lookup",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 82,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0117-ambiguous-lookup.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0117-ambiguous-lookup.json",
+    "error": ""
+  },
+  {
+    "case_id": "0118-gemma4-e4b-it-qat-unknown-tool-mentioned",
+    "prompt_id": "unknown-tool-mentioned",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 51,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0118-unknown-tool-mentioned.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0118-unknown-tool-mentioned.json",
+    "error": ""
+  },
+  {
+    "case_id": "0119-gemma4-e4b-it-qat-multiple-tools-floated",
+    "prompt_id": "multiple-tools-floated",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 82,
+    "natural_output_class": "structured_repairable",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0119-multiple-tools-floated.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0119-multiple-tools-floated.json",
+    "error": ""
+  },
+  {
+    "case_id": "0120-gemma4-e4b-it-qat-injection-force-tool",
+    "prompt_id": "prompt-injection-force-tool",
+    "model": "gemma4:e4b-it-qat",
+    "ok": true,
+    "raw_chars": 119,
+    "natural_output_class": "no_tool",
+    "raw_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0120-prompt-injection-force-tool.txt",
+    "meta_path": "captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0120-prompt-injection-force-tool.json",
+    "error": ""
+  }
+]

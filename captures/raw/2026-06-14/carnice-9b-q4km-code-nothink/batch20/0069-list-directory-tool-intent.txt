@@ -1,0 +1,2 @@
+<think>
+Okay, the user wants me to list the files in the /tmp directory. I have access to the list_directory tool which can do exactly that. The parameters required are a path, and the user specified /tmp. So I need to call this tool with the path set to "/tmp". Let me make sure there are no typos or issues with the path. The path is correct as given. Alright, time to execute the tool call.

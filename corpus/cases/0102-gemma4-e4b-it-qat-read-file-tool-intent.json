@@ -1,0 +1,43 @@
+{
+  "id": "0102-gemma4-e4b-it-qat-read-file-tool-intent",
+  "provenance": {
+    "kind": "captured",
+    "model": "gemma4:e4b-it-qat",
+    "runtime": "ollama",
+    "harness": "ollama-api-generate",
+    "prompt_id": "read-file-tool-intent",
+    "temperature": "0",
+    "captured": "2026-06-14",
+    "source": "gpu-capture-panel raw=captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0102-read-file-tool-intent.txt meta=captures/raw/2026-06-14/gemma4-e4b-it-qat/batch20/0102-read-file-tool-intent.json",
+    "sampler": "temperature=0,num_predict=384"
+  },
+  "request_tools": [
+    {
+      "name": "read_file",
+      "description": "Read a text file by path.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    }
+  ],
+  "raw_output": "{\"tool_name\": \"read_file\", \"params\": {\"path\": \"config/settings.toml\"}}",
+  "taxonomy": [
+    "provider_specific"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "read_file",
+    "arguments": {
+      "path": "config/settings.toml"
+    }
+  },
+  "note": "Emits a complete, single JSON call naming the offered tool with the required `path` present, using provider-specific field names (`tool_name`/`params`) instead of `name`/`arguments`; the intended call is recoverable from the emitted string alone."
+}

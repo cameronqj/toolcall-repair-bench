@@ -1,0 +1,3 @@
+{"name":"search_web","parameters":{"query":"Python packaging best practices 2024"}}
+</think>
+{"name":"fetch_url","parameters":{"url":"https://packaging.python.org/en/latest/tutorials/packaging-projects.html"}}

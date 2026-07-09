@@ -1,0 +1,11 @@
+<think>
+Okay, the user is asking me to explain in one sentence when someone would use fetch_url, and they specifically said not to actually fetch anything. Let me start by understanding what fetch_url does based on its description: it's a tool that fetches a URL. So, the purpose of this tool is to retrieve content from a web address.
+
+Now, I need to think about scenarios where someone would use such a tool. Common cases include getting data from an API, downloading files, or checking if a webpage exists. But since the user wants it in one sentence, I should keep it concise and clear. 
+
+Wait, the instruction says not to call any tools unless explicitly asked. The user's request is just for an explanation, so I shouldn't use fetch_url here. My job is to explain when someone would use it, not actually perform a fetch.
+
+So, putting it together: "Someone would use fetch_url when they need to retrieve data or content from a specific web address without manually visiting the page." That covers the main purpose and stays within one sentence. Let me check if that's accurate and meets all requirements. Yes, it explains the use case without actually using the tool.
+</think>
+
+Someone would use fetch_url when they need to programmatically retrieve data or content from a specific web address without manually visiting the page.

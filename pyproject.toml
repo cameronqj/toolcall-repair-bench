@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toolcall-repair-bench"
+version = "0.1.0"
+description = "Vendor-neutral benchmark for local-model tool-call repair"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Cameron Jones" }]
+dependencies = ["jsonschema>=4.0.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0", "ruff>=0.8.0"]
+# The local_tool_proxy adapter imports the sibling `local-tool-proxy` library,
+# which is installed separately and out-of-tree:
+#     pip install -e ../local-tool-proxy
+# It is intentionally NOT a dependency here, so the benchmark stays hermetic and
+# the adapter degrades gracefully (reported "unavailable") when it is absent.
+proxy = []
+
+[project.scripts]
+tcrb-score = "tcrb.scorer:main"
+tcrb-leaderboard = "tcrb.leaderboard:main"
+tcrb-validate = "tcrb.schema_validate:main"
+
+[project.urls]
+Homepage = "https://github.com/cameronqj/toolcall-repair-bench"
+Repository = "https://github.com/cameronqj/toolcall-repair-bench"
+Issues = "https://github.com/cameronqj/toolcall-repair-bench/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tcrb*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+# Real coverage, not just syntax errors: pycodestyle (E/W), pyflakes (F,
+# incl. unused imports), import sorting (I), and bugbear (B). pyupgrade (UP) is
+# intentionally omitted: the code targets py3.9 and uses typing.Dict/List on
+# purpose, which UP006 would churn for no correctness gain.
+select = ["E", "W", "F", "I", "B"]
+ignore = ["E501"]

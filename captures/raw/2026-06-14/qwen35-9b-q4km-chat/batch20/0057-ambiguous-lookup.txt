@@ -1,0 +1,10 @@
+<think>
+
+</think>
+
+{
+  "tool_name": "search_web",
+  "arguments": {
+    "query": "Look this up"
+  }
+}

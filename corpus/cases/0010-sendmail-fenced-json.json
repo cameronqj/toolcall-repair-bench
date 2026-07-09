@@ -1,0 +1,50 @@
+{
+  "id": "0010-sendmail-fenced-json",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models the markdown_fenced_json failure shape common to small local models.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "send_email",
+      "description": "Send an email message.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "to": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "to",
+          "subject",
+          "body"
+        ]
+      }
+    }
+  ],
+  "raw_output": "```json\n{\n  \"name\": \"send_email\",\n  \"arguments\": {\n    \"to\": \"sam@example.com\",\n    \"subject\": \"Lunch tomorrow?\",\n    \"body\": \"Are you free at noon?\"\n  }\n}\n```\n",
+  "taxonomy": [
+    "markdown_fenced_json"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "send_email",
+    "arguments": {
+      "to": "sam@example.com",
+      "subject": "Lunch tomorrow?",
+      "body": "Are you free at noon?"
+    }
+  },
+  "note": "Removing the ```json fence leaves a complete send_email tool call; the to, subject, and body values are lifted verbatim from inside the block."
+}

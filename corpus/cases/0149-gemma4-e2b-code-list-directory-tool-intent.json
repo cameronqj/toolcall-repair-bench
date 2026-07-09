@@ -1,0 +1,43 @@
+{
+  "id": "0149-gemma4-e2b-code-list-directory-tool-intent",
+  "provenance": {
+    "kind": "captured",
+    "model": "gemma4:e2b-code",
+    "runtime": "ollama",
+    "harness": "ollama-api-generate",
+    "prompt_id": "list-directory-tool-intent",
+    "temperature": "0",
+    "captured": "2026-06-14",
+    "source": "gpu-capture-panel raw=captures/raw/2026-06-14/gemma4-e2b-code/batch20/0149-list-directory-tool-intent.txt meta=captures/raw/2026-06-14/gemma4-e2b-code/batch20/0149-list-directory-tool-intent.json",
+    "sampler": "temperature=0,num_predict=384"
+  },
+  "request_tools": [
+    {
+      "name": "list_directory",
+      "description": "List files in a directory.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    }
+  ],
+  "raw_output": "{\"tool_call\":\"list_directory\",\"parameters\":{\"path\":\"/tmp\"}}",
+  "taxonomy": [
+    "provider_specific"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "list_directory",
+    "arguments": {
+      "path": "/tmp"
+    }
+  },
+  "note": "The output uses a provider-specific `tool_call` field with the required path argument."
+}

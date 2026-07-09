@@ -1,0 +1,42 @@
+{
+  "case_id": "0082-carnice-9b-q4km-read-file-tool-intent",
+  "prompt_id": "read-file-tool-intent",
+  "natural_output_class": "semi_structured_repairable",
+  "model": "carnice:9b-q4km",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "read_file",
+      "description": "Read a text file by path.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"read_file\",\"description\":\"Read a text file by path.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"}},\"required\":[\"path\"]}}\n\nUser request: Read the file config/settings.toml.",
+  "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0082-read-file-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "carnice:9b-q4km",
+    "created_at": "2026-06-14T14:11:14.19373306Z",
+    "thinking": "Okay, the user wants me to read the file config/settings.toml. I need to use the read_file tool with the correct path. The path should be exactly as specified: \"config/settings.toml\". Let me make sure there are no typos. The tool requires the path parameter, so I'll pass that directly. No other steps needed here.\n",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 2144286681,
+    "load_duration": 661410235,
+    "prompt_eval_count": 90,
+    "prompt_eval_duration": 43940000,
+    "eval_count": 91,
+    "eval_duration": 1366481000
+  },
+  "elapsed_seconds": 2.543
+}

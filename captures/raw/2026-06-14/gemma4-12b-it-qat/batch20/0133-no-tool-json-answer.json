@@ -1,0 +1,41 @@
+{
+  "case_id": "0133-gemma4-12b-it-qat-no-tool-json-answer",
+  "prompt_id": "no-tool-json-answer",
+  "natural_output_class": "semi_structured_repairable",
+  "model": "gemma4:12b-it-qat",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "search_web",
+      "description": "Search the web.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. Do not call a tool unless the user explicitly asks you to perform an external action.\n\nAvailable tools:\n{\"name\":\"search_web\",\"description\":\"Search the web.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"query\":{\"type\":\"string\"}},\"required\":[\"query\"]}}\n\nUser request: Show a JSON example of a book object with title and author. Answer directly.",
+  "raw_path": "captures/raw/2026-06-14/gemma4-12b-it-qat/batch20/0133-no-tool-json-answer.txt",
+  "ollama_response_metadata": {
+    "model": "gemma4:12b-it-qat",
+    "created_at": "2026-06-14T14:15:25.009966674Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 4527088437,
+    "load_duration": 902878794,
+    "prompt_eval_count": 102,
+    "prompt_eval_duration": 239571000,
+    "eval_count": 70,
+    "eval_duration": 3372594000
+  },
+  "elapsed_seconds": 4.905
+}

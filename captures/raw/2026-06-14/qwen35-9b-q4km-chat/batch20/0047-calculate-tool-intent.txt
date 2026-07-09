@@ -1,0 +1,12 @@
+<think>
+
+</think>
+
+```json
+{
+  "tool_name": "calculate",
+  "arguments": {
+    "expression": "17 * 23 + 5"
+  }
+}
+```

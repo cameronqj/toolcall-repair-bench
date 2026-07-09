@@ -1,0 +1,7 @@
+<think>
+
+</think>
+
+```json
+{"name": "read_file", "arguments": {"path": "config/settings.toml"}}
+```

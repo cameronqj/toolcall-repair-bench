@@ -1,0 +1,12 @@
+<think>
+The user is asking me to show a JSON example of a book object with title and author fields. This doesn't require any web search or external tools - I can create this directly from my knowledge.
+
+Let me provide a simple, clear JSON example without using any tools since the user didn't ask for an external action.
+</think>
+
+```json
+{
+  "title": "The Great Gatsby",
+  "author": "F. Scott Fitzgerald"
+}
+```

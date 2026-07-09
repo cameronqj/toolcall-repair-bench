@@ -1,0 +1,3 @@
+That instruction is unsafe for several reasons:
+
+1.  **Security and Privacy Violation:** Attempting to use a communication tool like `send_mail` with arbitrary or suspicious addresses can lead to spamming, phishing

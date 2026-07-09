@@ -1,0 +1,1 @@
+{"name":"get_stock_quote","parameters":{"symbol":"NVDA"}}

@@ -1,0 +1,44 @@
+{
+  "id": "0031-code-snippet-tool-name",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "synthetic": true,
+    "source": "Hand-authored negative control: a code snippet that defines/calls a function sharing an offered tool's name, presented as illustration."
+  },
+  "request_tools": [
+    {
+      "name": "send_email",
+      "description": "Send an email message.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "to": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "to",
+          "subject",
+          "body"
+        ]
+      }
+    }
+  ],
+  "raw_output": "Here is how the signup hook works:\n\n```python\ndef notify(user):\n    send_email(to=user.email, subject=\"Welcome\", body=\"Thanks for joining\")\n```\n\nCall notify(user) right after the account is created.",
+  "taxonomy": [
+    "code_snippet_mention"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "The output explains code; `send_email(...)` appears inside an illustrative Python snippet, not as a call the model is making now. A repairer that greps for the tool name (or parses the call syntax) would fabricate a send_email call. no_tool is correct."
+}

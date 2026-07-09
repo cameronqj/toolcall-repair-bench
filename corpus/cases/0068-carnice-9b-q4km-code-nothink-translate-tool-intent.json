@@ -1,0 +1,43 @@
+{
+  "id": "0068-carnice-9b-q4km-code-nothink-translate-tool-intent",
+  "provenance": {
+    "kind": "captured",
+    "model": "carnice:9b-q4km-code-nothink",
+    "runtime": "ollama",
+    "harness": "ollama-api-generate",
+    "prompt_id": "translate-tool-intent",
+    "temperature": "0",
+    "captured": "2026-06-14",
+    "source": "gpu-capture-panel raw=captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0068-translate-tool-intent.txt meta=captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0068-translate-tool-intent.json",
+    "sampler": "temperature=0,num_predict=384"
+  },
+  "request_tools": [
+    {
+      "name": "translate_text",
+      "description": "Translate text into a target language.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "target_language": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text",
+          "target_language"
+        ]
+      }
+    }
+  ],
+  "raw_output": "<think>\nOkay, the user wants me to translate \"good morning\" into Spanish. Let me start by recalling the correct translation. \"Good morning\" in Spanish is commonly translated as \"buenos días\". I should make sure that's accurate. Sometimes there are regional variations, but \"buenos días\" is the standard and widely accepted term. Let me double-check if there's any alternative or if context matters here. Since it's a straightforward translation without specific context, the standard phrase should suffice. No need for additional explanations unless asked. Alright, I'll proceed with that.\n",
+  "taxonomy": [
+    "plain_answer"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "The output is leaked/incomplete reasoning and contains no final committed tool-call object; repairing it would act on thought text rather than an emitted call."
+}

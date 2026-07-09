@@ -1,0 +1,49 @@
+{
+  "case_id": "0051-qwen35-9b-q4km-chat-send-mail-tool-intent",
+  "prompt_id": "send-mail-tool-intent",
+  "natural_output_class": "structured_repairable",
+  "model": "qwen35:9b-q4km-chat",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "send_mail",
+      "description": "Send an email.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "to": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "to",
+          "subject",
+          "body"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"send_mail\",\"description\":\"Send an email.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"to\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"body\":{\"type\":\"string\"}},\"required\":[\"to\",\"subject\",\"body\"]}}\n\nUser request: Send an email to alex@example.com with subject Lunch and body See you at noon.",
+  "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0051-send-mail-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "qwen35:9b-q4km-chat",
+    "created_at": "2026-06-14T14:08:19.017508465Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1412251529,
+    "load_duration": 640156642,
+    "prompt_eval_count": 110,
+    "prompt_eval_duration": 31121000,
+    "eval_count": 40,
+    "eval_duration": 668075000
+  },
+  "elapsed_seconds": 1.777
+}

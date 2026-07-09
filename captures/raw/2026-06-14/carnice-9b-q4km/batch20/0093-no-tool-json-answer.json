@@ -1,0 +1,42 @@
+{
+  "case_id": "0093-carnice-9b-q4km-no-tool-json-answer",
+  "prompt_id": "no-tool-json-answer",
+  "natural_output_class": "semi_structured_repairable",
+  "model": "carnice:9b-q4km",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "search_web",
+      "description": "Search the web.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. Do not call a tool unless the user explicitly asks you to perform an external action.\n\nAvailable tools:\n{\"name\":\"search_web\",\"description\":\"Search the web.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"query\":{\"type\":\"string\"}},\"required\":[\"query\"]}}\n\nUser request: Show a JSON example of a book object with title and author. Answer directly.",
+  "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0093-no-tool-json-answer.txt",
+  "ollama_response_metadata": {
+    "model": "carnice:9b-q4km",
+    "created_at": "2026-06-14T14:11:58.360178642Z",
+    "thinking": "Okay, the user wants a JSON example of a book object with title and author. Let me think about how to structure this. JSON uses key-value pairs, so I need to make sure the keys are properly quoted. The title and author are the required fields. I should use simple strings for the values. Maybe something like {\"title\": \"Example Book\", \"author\": \"John Doe\"}. That seems straightforward. I need to ensure there are no extra fields since the user only mentioned title and author. Also, check for proper JSON syntax: double quotes, commas between properties, no trailing commas. Yep, that looks correct. No need for additional fields or complex structures. Just a simple object with two key-value pairs. Alright, that should meet the user's request.\n",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 3617003108,
+    "load_duration": 681766460,
+    "prompt_eval_count": 93,
+    "prompt_eval_duration": 43772000,
+    "eval_count": 186,
+    "eval_duration": 2817768000
+  },
+  "elapsed_seconds": 4.0
+}

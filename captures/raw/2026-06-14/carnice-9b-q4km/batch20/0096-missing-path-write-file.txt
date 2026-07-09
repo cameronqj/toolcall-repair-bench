@@ -1,0 +1,1 @@
+{"name":"write_file","arguments":{"path":"batch_twenty.txt","content":"hello from batch twenty."}}

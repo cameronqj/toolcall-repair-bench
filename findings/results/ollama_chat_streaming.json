@@ -1,0 +1,238 @@
+[
+  {
+    "model": "gemma4:e4b-mlx",
+    "prompt": "weather",
+    "verdict": "clean_tool_calls",
+    "finish_reason": "tool_calls",
+    "n_chunks": 105,
+    "arg_fragmented": false,
+    "detail": [
+      [
+        "get_weather",
+        "{\"city\":\"Tokyo\"}"
+      ]
+    ]
+  },
+  {
+    "model": "gemma4:e4b-mlx",
+    "prompt": "search",
+    "verdict": "clean_tool_calls",
+    "finish_reason": "tool_calls",
+    "n_chunks": 112,
+    "arg_fragmented": false,
+    "detail": [
+      [
+        "web_search",
+        "{\"query\":\"who won the 2026 UEFA Champions League final\"}"
+      ]
+    ]
+  },
+  {
+    "model": "gemma4:e4b-mlx",
+    "prompt": "event",
+    "verdict": "clean_tool_calls",
+    "finish_reason": "tool_calls",
+    "n_chunks": 143,
+    "arg_fragmented": false,
+    "detail": [
+      [
+        "create_event",
+        "{\"attendees\":[\"alice\",\"bob\"],\"date\":\"2026-07-15\",\"title\":\"Q3 review\"}"
+      ]
+    ]
+  },
+  {
+    "model": "gemma4:e4b-mlx",
+    "prompt": "parallel",
+    "verdict": "clean_tool_calls",
+    "finish_reason": "tool_calls",
+    "n_chunks": 121,
+    "arg_fragmented": false,
+    "detail": [
+      [
+        "get_weather",
+        "{\"city\":\"Paris\"}"
+      ],
+      [
+        "web_search",
+        "{\"query\":\"2026 Wimbledon champion\"}"
+      ]
+    ]
+  },
+  {
+    "model": "gemma4:12b-it-qat",
+    "prompt": "weather",
+    "verdict": "clean_tool_calls",
+    "finish_reason": "tool_calls",
+    "n_chunks": 47,
+    "arg_fragmented": false,
+    "detail": [
+      [
+        "get_weather",
+        "{\"city\":\"Tokyo\"}"
+      ]
+    ]
+  },
+  {
+    "model": "gemma4:12b-it-qat",
+    "prompt": "search",
+    "verdict": "clean_tool_calls",
+    "finish_reason": "tool_calls",
+    "n_chunks": 140,
+    "arg_fragmented": false,
+    "detail": [
+      [
+        "web_search",
+        "{\"query\":\"2026 UEFA Champions League final date and winner\"}"
+      ]
+    ]
+  },
+  {
+    "model": "gemma4:12b-it-qat",
+    "prompt": "event",
+    "verdict": "clean_tool_calls",
+    "finish_reason": "tool_calls",
+    "n_chunks": 77,
+    "arg_fragmented": false,
+    "detail": [
+      [
+        "create_event",
+        "{\"attendees\":[\"alice\",\"bob\"],\"date\":\"2026-07-15\",\"title\":\"Q3 review\"}"
+      ]
+    ]
+  },
+  {
+    "model": "gemma4:12b-it-qat",
+    "prompt": "parallel",
+    "verdict": "clean_tool_calls",
+    "finish_reason": "tool_calls",
+    "n_chunks": 88,
+    "arg_fragmented": false,
+    "detail": [
+      [
+        "get_weather",
+        "{\"city\":\"Paris\"}"
+      ],
+      [
+        "web_search",
+        "{\"query\":\"2026 Wimbledon champion\"}"
+      ]
+    ]
+  },
+  {
+    "model": "qwen3.5:9b-q8_0",
+    "prompt": "weather",
+    "verdict": "clean_tool_calls",
+    "finish_reason": "tool_calls",
+    "n_chunks": 74,
+    "arg_fragmented": false,
+    "detail": [
+      [
+        "get_weather",
+        "{\"city\":\"Tokyo\"}"
+      ]
+    ]
+  },
+  {
+    "model": "qwen3.5:9b-q8_0",
+    "prompt": "search",
+    "verdict": "clean_tool_calls",
+    "finish_reason": "tool_calls",
+    "n_chunks": 56,
+    "arg_fragmented": false,
+    "detail": [
+      [
+        "web_search",
+        "{\"query\":\"2026 UEFA Champions League final winner\"}"
+      ]
+    ]
+  },
+  {
+    "model": "qwen3.5:9b-q8_0",
+    "prompt": "event",
+    "verdict": "clean_tool_calls",
+    "finish_reason": "tool_calls",
+    "n_chunks": 121,
+    "arg_fragmented": false,
+    "detail": [
+      [
+        "create_event",
+        "{\"title\":\"Q3 review\",\"date\":\"2026-07-15\",\"attendees\":[\"alice\",\"bob\"]}"
+      ]
+    ]
+  },
+  {
+    "model": "qwen3.5:9b-q8_0",
+    "prompt": "parallel",
+    "verdict": "clean_tool_calls",
+    "finish_reason": "tool_calls",
+    "n_chunks": 96,
+    "arg_fragmented": false,
+    "detail": [
+      [
+        "get_weather",
+        "{\"city\":\"Paris\"}"
+      ],
+      [
+        "web_search",
+        "{\"query\":\"2026 Wimbledon champion\"}"
+      ]
+    ]
+  },
+  {
+    "model": "gpt-oss:20b",
+    "prompt": "weather",
+    "verdict": "clean_tool_calls",
+    "finish_reason": "tool_calls",
+    "n_chunks": 14,
+    "arg_fragmented": false,
+    "detail": [
+      [
+        "get_weather",
+        "{\"city\":\"Tokyo\"}"
+      ]
+    ]
+  },
+  {
+    "model": "gpt-oss:20b",
+    "prompt": "search",
+    "verdict": "clean_tool_calls",
+    "finish_reason": "tool_calls",
+    "n_chunks": 21,
+    "arg_fragmented": false,
+    "detail": [
+      [
+        "web_search",
+        "{\"query\":\"2026 UEFA Champions League final winner\"}"
+      ]
+    ]
+  },
+  {
+    "model": "gpt-oss:20b",
+    "prompt": "event",
+    "verdict": "clean_tool_calls",
+    "finish_reason": "tool_calls",
+    "n_chunks": 42,
+    "arg_fragmented": false,
+    "detail": [
+      [
+        "create_event",
+        "{\"attendees\":[\"alice\",\"bob\"],\"date\":\"2026-07-15\",\"title\":\"Q3 review\"}"
+      ]
+    ]
+  },
+  {
+    "model": "gpt-oss:20b",
+    "prompt": "parallel",
+    "verdict": "clean_tool_calls",
+    "finish_reason": "tool_calls",
+    "n_chunks": 28,
+    "arg_fragmented": false,
+    "detail": [
+      [
+        "get_weather",
+        "{\"city\":\"Paris\"}"
+      ]
+    ]
+  }
+]

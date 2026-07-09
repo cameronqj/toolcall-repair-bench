@@ -1,0 +1,45 @@
+{
+  "case_id": "0048-qwen35-9b-q4km-chat-translate-tool-intent",
+  "prompt_id": "translate-tool-intent",
+  "natural_output_class": "structured_repairable",
+  "model": "qwen35:9b-q4km-chat",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "translate_text",
+      "description": "Translate text into a target language.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "target_language": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text",
+          "target_language"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"translate_text\",\"description\":\"Translate text into a target language.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"text\":{\"type\":\"string\"},\"target_language\":{\"type\":\"string\"}},\"required\":[\"text\",\"target_language\"]}}\n\nUser request: Translate 'good morning' into Spanish.",
+  "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0048-translate-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "qwen35:9b-q4km-chat",
+    "created_at": "2026-06-14T14:08:13.475359602Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1232002625,
+    "load_duration": 633493214,
+    "prompt_eval_count": 98,
+    "prompt_eval_duration": 31133000,
+    "eval_count": 30,
+    "eval_duration": 496397000
+  },
+  "elapsed_seconds": 1.598
+}

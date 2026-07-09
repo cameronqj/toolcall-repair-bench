@@ -1,0 +1,45 @@
+{
+  "id": "0022-clarify-missing-info",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models the model asking for missing required arguments instead of calling.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "book_flight",
+      "description": "Book a flight between two cities on a given date.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "origin": {
+            "type": "string"
+          },
+          "destination": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "required": [
+          "origin",
+          "destination",
+          "date"
+        ]
+      }
+    }
+  ],
+  "raw_output": "Happy to book that for you. Which city are you flying from, and what date do you want to travel? You said the destination is Lisbon, but I'll need the origin and date before I can search for flights.",
+  "taxonomy": [
+    "clarifying_question"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "Required arguments (origin and date) are unknown, so the model correctly asks for them rather than guessing; calling now would fabricate arguments, so no_tool is correct."
+}

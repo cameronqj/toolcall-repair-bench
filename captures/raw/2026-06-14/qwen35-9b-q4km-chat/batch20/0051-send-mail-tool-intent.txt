@@ -1,0 +1,5 @@
+<think>
+
+</think>
+
+{"name": "send_mail", "arguments": {"to": "alex@example.com", "subject": "Lunch", "body": "See you at noon."}}

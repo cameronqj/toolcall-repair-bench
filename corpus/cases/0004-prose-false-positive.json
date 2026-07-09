@@ -1,0 +1,39 @@
+{
+  "id": "0004-prose-false-positive",
+  "provenance": {
+    "kind": "captured",
+    "model": "gemma-3-4b",
+    "sampler": "unknown",
+    "captured": "2026-05-26",
+    "source": "local-tool-proxy tests/fixtures/model_outputs/prose_false_positive.txt"
+  },
+  "request_tools": [
+    {
+      "name": "write_file",
+      "description": "Write content to a file at the given path.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "content"
+        ]
+      }
+    }
+  ],
+  "raw_output": "I will write_file after I inspect the project. First I need to understand the existing tests, then I will decide what to change.\n",
+  "taxonomy": [
+    "prose_false_positive"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "The model mentions the tool name `write_file` in prose but does not emit a call. A maximalist repairer that greps for tool names will fabricate a call here; the correct answer is no_tool."
+}

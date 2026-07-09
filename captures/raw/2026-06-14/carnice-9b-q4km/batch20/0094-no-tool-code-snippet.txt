@@ -1,0 +1,8 @@
+Here's a Python function named `run_command` that prints "hello":
+
+```python
+def run_command():
+    print("hello")
+```
+
+This function takes no arguments and simply prints the string "hello" when called.

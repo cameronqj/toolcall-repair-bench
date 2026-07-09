@@ -1,0 +1,1 @@
+{"tool_name": "translate_text", "params": {"text": "good morning", "target_language": "Spanish"}}

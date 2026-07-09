@@ -1,0 +1,50 @@
+{
+  "case_id": "0091-carnice-9b-q4km-send-mail-tool-intent",
+  "prompt_id": "send-mail-tool-intent",
+  "natural_output_class": "structured_repairable",
+  "model": "carnice:9b-q4km",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "send_mail",
+      "description": "Send an email.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "to": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "to",
+          "subject",
+          "body"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"send_mail\",\"description\":\"Send an email.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"to\":{\"type\":\"string\"},\"subject\":{\"type\":\"string\"},\"body\":{\"type\":\"string\"}},\"required\":[\"to\",\"subject\",\"body\"]}}\n\nUser request: Send an email to alex@example.com with subject Lunch and body See you at noon.",
+  "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km/batch20/0091-send-mail-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "carnice:9b-q4km",
+    "created_at": "2026-06-14T14:11:51.317653295Z",
+    "thinking": "Okay, let's see. The user wants me to send an email to alex@example.com with the subject \"Lunch\" and the body \"See you at noon.\" I need to use the send_mail tool for this. Let me check the parameters required. The tool requires to, subject, and body. All three are provided here. So I just need to plug them into the parameters. Let me make sure there are no typos. The email address is alex@example.com, subject is exactly \"Lunch\", and the body is \"See you at noon.\" Alright, that should be straightforward. No need for any additional steps or checks. Just call the tool with those parameters.\n",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 3336950003,
+    "load_duration": 659428781,
+    "prompt_eval_count": 112,
+    "prompt_eval_duration": 43675000,
+    "eval_count": 169,
+    "eval_duration": 2562320000
+  },
+  "elapsed_seconds": 3.714
+}

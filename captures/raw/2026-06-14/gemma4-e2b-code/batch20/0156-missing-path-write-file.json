@@ -1,0 +1,45 @@
+{
+  "case_id": "0156-gemma4-e2b-code-missing-path-write-file",
+  "prompt_id": "missing-path-write-file",
+  "natural_output_class": "semi_structured_repairable",
+  "model": "gemma4:e2b-code",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "write_file",
+      "description": "Write content to a file.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "content"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"write_file\",\"description\":\"Write content to a file.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"},\"content\":{\"type\":\"string\"}},\"required\":[\"path\",\"content\"]}}\n\nUser request: Write this text to the file: hello from batch twenty.",
+  "raw_path": "captures/raw/2026-06-14/gemma4-e2b-code/batch20/0156-missing-path-write-file.txt",
+  "ollama_response_metadata": {
+    "model": "gemma4:e2b-code",
+    "created_at": "2026-06-14T14:19:26.456519065Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 2759867873,
+    "load_duration": 962544892,
+    "prompt_eval_count": 111,
+    "prompt_eval_duration": 33189999,
+    "eval_count": 197,
+    "eval_duration": 1758552000
+  },
+  "elapsed_seconds": 3.129
+}

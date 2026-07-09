@@ -1,0 +1,1 @@
+{"tool_call": {"name": "search_web", "parameters": {"query": "llama.cpp Gemma 4 context window"}}}

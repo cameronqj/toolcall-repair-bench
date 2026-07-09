@@ -1,0 +1,41 @@
+{
+  "case_id": "0066-carnice-9b-q4km-code-nothink-search-web-tool-intent",
+  "prompt_id": "search-web-tool-intent",
+  "natural_output_class": "no_tool",
+  "model": "carnice:9b-q4km-code-nothink",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "search_web",
+      "description": "Search the web.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"search_web\",\"description\":\"Search the web.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"query\":{\"type\":\"string\"}},\"required\":[\"query\"]}}\n\nUser request: Search the web for llama.cpp Gemma 4 context window.",
+  "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0066-search-web-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "carnice:9b-q4km-code-nothink",
+    "created_at": "2026-06-14T14:10:13.459353014Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1848205360,
+    "load_duration": 644946657,
+    "prompt_eval_count": 90,
+    "prompt_eval_duration": 79354000,
+    "eval_count": 63,
+    "eval_duration": 1058867000
+  },
+  "elapsed_seconds": 2.302
+}

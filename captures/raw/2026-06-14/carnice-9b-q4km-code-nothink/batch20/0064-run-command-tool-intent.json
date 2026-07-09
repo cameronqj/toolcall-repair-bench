@@ -1,0 +1,41 @@
+{
+  "case_id": "0064-carnice-9b-q4km-code-nothink-run-command-tool-intent",
+  "prompt_id": "run-command-tool-intent",
+  "natural_output_class": "missing_required_args",
+  "model": "carnice:9b-q4km-code-nothink",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "run_command",
+      "description": "Run a shell command.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "command": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "command"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"run_command\",\"description\":\"Run a shell command.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"command\":{\"type\":\"string\"}},\"required\":[\"command\"]}}\n\nUser request: Run the command pwd.",
+  "raw_path": "captures/raw/2026-06-14/carnice-9b-q4km-code-nothink/batch20/0064-run-command-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "carnice:9b-q4km-code-nothink",
+    "created_at": "2026-06-14T14:10:08.433739654Z",
+    "done": true,
+    "done_reason": "length",
+    "total_duration": 7262415768,
+    "load_duration": 604596085,
+    "prompt_eval_count": 83,
+    "prompt_eval_duration": 78284000,
+    "eval_count": 384,
+    "eval_duration": 6517033000
+  },
+  "elapsed_seconds": 7.64
+}

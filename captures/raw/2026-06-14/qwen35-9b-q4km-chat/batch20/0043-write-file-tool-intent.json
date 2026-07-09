@@ -1,0 +1,45 @@
+{
+  "case_id": "0043-qwen35-9b-q4km-chat-write-file-tool-intent",
+  "prompt_id": "write-file-tool-intent",
+  "natural_output_class": "semi_structured_repairable",
+  "model": "qwen35:9b-q4km-chat",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "write_file",
+      "description": "Write content to a file.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "content"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"write_file\",\"description\":\"Write content to a file.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"},\"content\":{\"type\":\"string\"}},\"required\":[\"path\",\"content\"]}}\n\nUser request: Write 'alpha beta' to notes/todo.txt.",
+  "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0043-write-file-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "qwen35:9b-q4km-chat",
+    "created_at": "2026-06-14T14:08:03.972483297Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1369644925,
+    "load_duration": 629070730,
+    "prompt_eval_count": 97,
+    "prompt_eval_duration": 80464000,
+    "eval_count": 35,
+    "eval_duration": 583781000
+  },
+  "elapsed_seconds": 1.764
+}

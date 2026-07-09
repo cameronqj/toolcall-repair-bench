@@ -1,0 +1,41 @@
+{
+  "case_id": "0042-qwen35-9b-q4km-chat-read-file-tool-intent",
+  "prompt_id": "read-file-tool-intent",
+  "natural_output_class": "semi_structured_repairable",
+  "model": "qwen35:9b-q4km-chat",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "read_file",
+      "description": "Read a text file by path.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"read_file\",\"description\":\"Read a text file by path.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"path\":{\"type\":\"string\"}},\"required\":[\"path\"]}}\n\nUser request: Read the file config/settings.toml.",
+  "raw_path": "captures/raw/2026-06-14/qwen35-9b-q4km-chat/batch20/0042-read-file-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "qwen35:9b-q4km-chat",
+    "created_at": "2026-06-14T14:08:02.149636112Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1243640074,
+    "load_duration": 607287424,
+    "prompt_eval_count": 88,
+    "prompt_eval_duration": 78804000,
+    "eval_count": 29,
+    "eval_duration": 487431000
+  },
+  "elapsed_seconds": 1.629
+}

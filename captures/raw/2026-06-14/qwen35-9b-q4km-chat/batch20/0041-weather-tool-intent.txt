@@ -1,0 +1,5 @@
+<think>
+
+</think>
+
+{"get_weather": {"city": "Seattle", "units": "imperial"}}

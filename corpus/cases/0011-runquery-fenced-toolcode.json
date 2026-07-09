@@ -1,0 +1,44 @@
+{
+  "id": "0011-runquery-fenced-toolcode",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "source": "Hand-authored for toolcall-repair-bench; models the markdown_fenced_json failure shape common to small local models.",
+    "synthetic": true
+  },
+  "request_tools": [
+    {
+      "name": "run_sql_query",
+      "description": "Run a read-only SQL query against the analytics database.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "sql": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "sql"
+        ]
+      }
+    }
+  ],
+  "raw_output": "```tool_code\n{\"name\": \"run_sql_query\", \"arguments\": {\"sql\": \"SELECT id, name FROM users WHERE active = 1\", \"limit\": 100}}\n```\n",
+  "taxonomy": [
+    "markdown_fenced_json"
+  ],
+  "gold": {
+    "type": "tool_call",
+    "name": "run_sql_query",
+    "arguments": {
+      "sql": "SELECT id, name FROM users WHERE active = 1",
+      "limit": 100
+    }
+  },
+  "note": "The call is wrapped in a ```tool_code fence rather than a json fence; stripping the fence yields a complete run_sql_query JSON object with sql and limit copied verbatim."
+}

@@ -1,0 +1,41 @@
+{
+  "case_id": "0147-gemma4-e2b-code-calculate-tool-intent",
+  "prompt_id": "calculate-tool-intent",
+  "natural_output_class": "semi_structured_repairable",
+  "model": "gemma4:e2b-code",
+  "runtime": "ollama",
+  "harness": "ollama-api-generate",
+  "temperature": 0,
+  "request_tools": [
+    {
+      "name": "calculate",
+      "description": "Evaluate an arithmetic expression.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "expression": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "expression"
+        ]
+      }
+    }
+  ],
+  "prompt": "You are an assistant that can use tools. If a tool is needed, respond only with the tool call in JSON content, not prose.\n\nAvailable tools:\n{\"name\":\"calculate\",\"description\":\"Evaluate an arithmetic expression.\",\"parameters\":{\"type\":\"object\",\"properties\":{\"expression\":{\"type\":\"string\"}},\"required\":[\"expression\"]}}\n\nUser request: Calculate 17 * 23 + 5.",
+  "raw_path": "captures/raw/2026-06-14/gemma4-e2b-code/batch20/0147-calculate-tool-intent.txt",
+  "ollama_response_metadata": {
+    "model": "gemma4:e2b-code",
+    "created_at": "2026-06-14T14:18:59.840889419Z",
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 1798096349,
+    "load_duration": 797456689,
+    "prompt_eval_count": 99,
+    "prompt_eval_duration": 32674000,
+    "eval_count": 99,
+    "eval_duration": 964440000
+  },
+  "elapsed_seconds": 2.161
+}

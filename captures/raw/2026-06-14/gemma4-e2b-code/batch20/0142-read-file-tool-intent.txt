@@ -1,0 +1,8 @@
+```json
+{
+  "tool_call": "read_file",
+  "parameters": {
+    "path": "config/settings.toml"
+  }
+}
+```

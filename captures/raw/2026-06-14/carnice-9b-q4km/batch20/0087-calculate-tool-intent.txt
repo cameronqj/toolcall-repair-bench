@@ -1,0 +1,10 @@
+To calculate \( 17 \times 23 + 5 \):
+
+1. First, compute \( 17 \times 23 \):
+   - Break it down: \( 17 \times 20 = 340 \) and \( 17 \times 3 = 51 \).
+   - Add the results: \( 340 + 51 = 391 \).
+
+2. Then add 5:
+   - \( 391 + 5 = 396 \).
+
+The final result is \(\boxed{396}\).

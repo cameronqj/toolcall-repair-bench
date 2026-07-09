@@ -1,0 +1,1 @@
+Someone would use `fetch_url` when they need to programmatically retrieve data, such as text or images, from a specified web address.

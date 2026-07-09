@@ -1,0 +1,36 @@
+{
+  "id": "0034-unknown-tool-near-match",
+  "provenance": {
+    "kind": "synthetic",
+    "model": "synthetic",
+    "sampler": "n/a",
+    "captured": "2026-06-14",
+    "synthetic": true,
+    "source": "Hand-authored negative control: a well-formed call to a tool name that is close to, but not, an offered tool."
+  },
+  "request_tools": [
+    {
+      "name": "get_weather",
+      "description": "Get current weather for a city.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "city"
+        ]
+      }
+    }
+  ],
+  "raw_output": "{\"name\": \"get_forecast\", \"arguments\": {\"city\": \"Paris\"}}",
+  "taxonomy": [
+    "unknown_tool_near_match"
+  ],
+  "gold": {
+    "type": "no_tool"
+  },
+  "note": "The emitted call targets get_forecast, which was not offered; only get_weather was. Snapping the call to the nearest offered name would be a guess about intent that the model never expressed. no_tool is the correct conservative label."
+}
